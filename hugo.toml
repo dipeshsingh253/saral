@@ -1,0 +1,4 @@
+baseURL = 'https://dipeshsingh253.github.io/quickstart-hugo/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'ananke'
