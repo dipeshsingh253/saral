@@ -60,12 +60,15 @@ header {
 .hero-section{
   margin: 0;
   padding: 0;
+  width: auto;
   height: 100vh;
   background-color: $background-color;
   @include flex-center;
 
   div{
     @include flex-center;
+
+    width: 100%;
     flex-direction: column;
     img{
       width: 120px;
@@ -74,7 +77,8 @@ header {
       border: 5px solid black;
     }
     .socials{
-      width: 25rem;
+      width: 80%;
+      max-width: 25rem;
       flex-direction: row;
       justify-content: space-between;
       a{
