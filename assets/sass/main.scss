@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Noto+Sans&family=Poppins&display=swap');
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: #f1f1f1;
+$navbar-width : 80%;
+
+*{
+ margin: 0;
+ padding: 0;
+ font-family: 'Alkatra';
+}
+body {
+  // overflow: hidden !important; // Force full way to remove scrollbar
+  scrollbar-width: none; // For Firefox
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; // For IE and Edge
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Mixins
+@mixin flex-center {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+// Header styles
+header {
+  @include flex-center;
+  background-color: $background-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  #navbar{
+    @include flex-center;
+    justify-content: space-between;
+    width: $navbar-width;
+  }
+  .logo {
+    color: $primary-color;
+    font-size: 24px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-bar{
+    span{
+      padding-left: 10px;
+    }
+  }
+}
+
+.hero-section{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: $background-color;
+  @include flex-center;
+
+  div{
+    @include flex-center;
+    flex-direction: column;
+    img{
+      width: 120px;
+      height: auto;
+      border-radius: 50%;
+      border: 5px solid black;
+    }
+    .socials{
+      width: 25rem;
+      flex-direction: row;
+      justify-content: space-between;
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+}

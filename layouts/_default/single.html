@@ -1,36 +1,56 @@
-{{ define "main" }}
-<section id="main">
-  <h1 id="title">{{ .Title }}</h1>
-  <div>
-    <article id="content">{{ .Content }}</article>
-  </div>
-</section>
-<aside id="meta">
-  <div>
-    <section>
-      <h4 id="date">{{ .Date.Format "Mon Jan 2, 2006" }}</h4>
-      <h5 id="wordcount">{{ .WordCount }} Words</h5>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{.Title}}</title>
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS |
+    resources.Minify }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <!-- Logo -->
+        <div class="logo">John Doe</div>
+
+        <!-- Menu for small screens-->
+
+        <div class="nav-menu">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+
+        <!-- Navbar for large screens -->
+
+        <div class="nav-bar">
+          <span>Home</span><span>About</span><span>Contact</span
+          ><span>Blog</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <div>
+        <img src="/images/avatar.jpg" />
+        <h1>John Doe</h1>
+        <h2>Software Engineer</h2>
+        <div class="socials">
+          <a href="twitter"><span>twitter</span></a
+          ><a href="github"><span>github</span></a
+          ><a href="linkedin"><span>linkedin</span></a
+          ><a href="instagram"><span>instagram</span></a
+          ><a href="discord"><span>discord</span></a>
+        </div>
+      </div>
     </section>
-    {{ with .GetTerms "topics" }}
-    <ul id="topics">
-      {{ range . }}
-      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-      {{ end }}
-    </ul>
-    {{ end }} {{ with .GetTerms "tags" }}
-    <ul id="tags">
-      {{ range . }}
-      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-      {{ end }}
-    </ul>
-    {{ end }}
-  </div>
-  <div>
-    {{ with .PrevInSection }}
-    <a class="previous" href="{{ .Permalink }}"> {{ .Title }}</a>
-    {{ end }} {{ with .NextInSection }}
-    <a class="next" href="{{ .Permalink }}"> {{ .Title }}</a>
-    {{ end }}
-  </div>
-</aside>
-{{ end }}
+  </body>
+</html>
