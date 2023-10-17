@@ -18,30 +18,40 @@
         <!-- Logo -->
         <div class="logo">John Doe</div>
 
-        <!-- Menu for small screens-->
-
+        <!-- Menu for small screens -->
         <div class="nav-menu">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <a href="/posts"><li>Blog</li></a>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/posts">Blog</a></li>
           </ul>
         </div>
 
         <!-- Navbar for large screens -->
-
         <div class="nav-bar">
-          <span>Home</span><span>About</span><span>Contact</span
-          ><a href="/posts"><span>Blog</span></a>
+          <span><a href="/">Home</a></span>
+          <span><a href="/about">About</a></span>
+          <span><a href="/contact">Contact</a></span>
+          <a href="/posts"><span>Blog</span></a>
         </div>
       </div>
     </header>
-
-    <section class="post-section">
-      <h1 id="title">{{ .Title }}</h1>
-      <div>
-        <article id="content">{{ .Content }}</article>
+    <section class="list-section">
+      <div class="list-title">
+        <h1>{{ .Title }}</h1>
+        <p class="list-content">{{ .Content }}</p>
+      </div>
+      <div class="list-posts">
+        <ul>
+          {{ range .Pages }}
+          <li>
+            <a href="{{ .Permalink }}"
+              >{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a
+            >
+          </li>
+          {{ end }}
+        </ul>
       </div>
     </section>
   </body>

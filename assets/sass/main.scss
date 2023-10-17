@@ -8,7 +8,7 @@ $navbar-width : 80%;
 *{
  margin: 0;
  padding: 0;
- font-family: 'Alkatra';
+ font-family: 'Poppins';
 }
 body {
   // overflow: hidden !important; // Force full way to remove scrollbar
@@ -30,6 +30,7 @@ body {
 
 // Header styles
 header {
+
   @include flex-center;
   background-color: $background-color;
   position: fixed;
@@ -40,6 +41,9 @@ header {
     @include flex-center;
     justify-content: space-between;
     width: $navbar-width;
+    a{
+      text-decoration: none;
+    }
   }
   .logo {
     color: $primary-color;
@@ -52,16 +56,18 @@ header {
 
   .nav-bar{
     span{
-      padding-left: 10px;
+      padding-left: 15px;
     }
   }
+  // display: none;
 }
 
 .hero-section{
   margin: 0;
   padding: 0;
+  padding-top: 10vh;
   width: auto;
-  height: 100vh;
+  height: 90vh;
   background-color: $background-color;
   @include flex-center;
 
@@ -87,3 +93,51 @@ header {
     }
   }
 }
+
+.list-section {
+  margin: 0;
+  padding: 0;
+  padding-top: 10vh;
+  min-height: 90vh; /* Use min-height to ensure content is visible even if there are few posts */
+  background-color: $background-color;
+  @include flex-center;
+  flex-direction: column;
+  text-align: left; /* Align text to the right */
+
+  .list-title {
+    margin: 20px; /* Adjust the margin as needed */
+    h1 {
+      margin: 0; /* Reset margin for the h1 element */
+    }
+    p{
+      margin-top: 20px;
+    }
+  }
+
+  .list-posts {
+    ul {
+      list-style: none; /* Remove the default bullet points */
+      padding: 0;
+      margin: 0;
+      li {
+        margin: 10px 0; /* Add space between individual posts */
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.post-section {
+  margin: 0;
+  padding: 0;
+  @include flex-center;
+  flex-direction: column;
+  background-color: $background-color;
+  height: 100vh;
+
+}
+
+
+
