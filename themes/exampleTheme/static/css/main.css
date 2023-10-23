@@ -16,6 +16,7 @@ body {
   -ms-overflow-style: none;
   background-color: var(--background-color);
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -31,6 +32,7 @@ header {
   right: 0;
   height: 8vh;
 }
+
 header .navbar {
   display: flex;
   justify-content: center;
@@ -38,9 +40,11 @@ header .navbar {
   justify-content: space-between;
   width: 80%;
 }
+
 header .navbar a {
   text-decoration: none;
 }
+
 header .logo {
   color: #3498db;
   font-size: 24px;
@@ -48,6 +52,7 @@ header .logo {
   height: auto;
   border-radius: 50%;
 }
+
 header .menu span {
   padding-left: 15px;
 }
@@ -68,6 +73,7 @@ main {
   height: 90vh;
   margin-top: 10vh;
 }
+
 .hero div {
   display: flex;
   justify-content: center;
@@ -75,18 +81,21 @@ main {
   width: 100%;
   flex-direction: column;
 }
+
 .hero div img {
   width: 120px;
   height: auto;
   border-radius: 50%;
   border: 5px solid black;
 }
+
 .hero div .socials {
   width: 80%;
   max-width: 25rem;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .hero div .socials a {
   text-decoration: none;
 }
