@@ -1,22 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Noto+Sans&family=Poppins&display=swap");
+
+:root {
+  --background-color: #f1f1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Alkatra";
+}
+
 body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9c3f3f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8vh;
 }
 
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+header .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
 }
 
-a {
-  color: #00e;
+header .navbar a {
   text-decoration: none;
+}
+
+header .logo {
+  color: #3498db;
+  font-size: 24px;
+  width: 35px;
+  height: auto;
+  border-radius: 50%;
+}
+
+header .menu span {
+  padding-left: 15px;
+}
+
+main {
+  height: 90vh;
+}
+
+.hero {
+  height: 90vh;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: auto;
+  height: 90vh;
+  margin-top: 10vh;
+}
+
+.hero div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.hero div img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+
+.hero div .socials {
+  width: 80%;
+  max-width: 25rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hero div .socials a {
+  text-decoration: none;
+}
+
+.recent-posts {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
