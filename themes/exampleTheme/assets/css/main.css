@@ -105,16 +105,16 @@ main {
   text-decoration: none;
 }
 
-.recent-posts {
+.posts-section {
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 35px;
 }
 
-.recent-posts div span {
+.posts-section div span {
   /* background-color: lightcoral; */
   text-decoration: none;
   display: block;
@@ -122,11 +122,11 @@ main {
   margin: auto;
   padding-top: 20px;
 }
-.recent-posts a {
+.posts-section a {
   text-decoration: none;
   color: black;
 }
 
-.recent-posts p {
+.posts-section p {
   color: rgba(0, 0, 0, 0.555);
 }
