@@ -16,9 +16,8 @@
   <section class="recent-posts">
     <h2>Recent Posts</h2>
     <div>
-      {{ .Content }} {{ range site.RegularPages }}
-      <a href="{{ .RelPermalink }}"> {{ partial "post/listview.html" . }} </a>
-      {{ end }}
+      {{ .Content }} {{ range site.RegularPages }} {{ partial
+      "post/listview.html" . }} {{ end }}
     </div>
   </section>
 </main>

@@ -10,8 +10,13 @@
   font-family: "Alkatra";
 }
 
-body {
+html {
   scrollbar-width: none;
+}
+/* p {
+  color: rgba(0, 0, 0, 0.555);
+} */
+body {
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   background-color: var(--background-color);
@@ -106,5 +111,22 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 50px;
+}
+
+.recent-posts div span {
+  /* background-color: lightcoral; */
+  text-decoration: none;
+  display: block;
+  width: 85%;
+  margin: auto;
+  padding-top: 20px;
+}
+.recent-posts a {
+  text-decoration: none;
+  color: black;
+}
+
+.recent-posts p {
+  color: rgba(0, 0, 0, 0.555);
 }
