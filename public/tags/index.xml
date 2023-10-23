@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on My New Hugo Site</title>
+    <link>https://example.org/tags/</link>
+    <description>Recent content in Tags on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate><atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blue</title>
+      <link>https://example.org/tags/blue/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      
+      <guid>https://example.org/tags/blue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>green</title>
+      <link>https://example.org/tags/green/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      
+      <guid>https://example.org/tags/green/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>red</title>
+      <link>https://example.org/tags/red/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      
+      <guid>https://example.org/tags/red/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
