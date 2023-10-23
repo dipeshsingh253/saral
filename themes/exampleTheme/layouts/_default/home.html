@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main>
+  <section class="hero">
+    <div>
+      <img src="/images/avatar.jpg" />
+      <h1>{{ .Site.Data.profile.name }}</h1>
+      <h2>{{ .Site.Data.profile.role }}</h2>
+      <p>{{ .Site.Data.profile.slogan }}</p>
+      <div class="socials">
+        {{ range .Site.Data.profile.socials }}
+        <a target="_blank" href="{{ .url }}"><span>{{ .name }}</span></a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  <section class="recent-posts">
+    <h2>Recent Posts</h2>
+    <div>
+      {{ .Content }} {{ range site.RegularPages }}
+      <a href="{{ .RelPermalink }}"> {{ partial "post/listview.html" . }} </a>
+      {{ end }}
+    </div>
+  </section>
+</main>
+
+{{ end }}
