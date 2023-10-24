@@ -180,6 +180,14 @@ main {
   }
 }
 
-@media only screen and (max-width: 767px) and (orientation: portrait) {
+@media only screen and (max-height: 767px) and (orientation: landscape) {
   /* portrait phones */
+
+  header {
+    height: 15vh;
+    background-color: green;
+  }
+  .post-content {
+    padding-top: 15vh;
+  }
 }
