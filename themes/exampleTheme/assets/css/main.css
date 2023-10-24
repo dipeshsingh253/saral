@@ -162,7 +162,6 @@ main {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     padding: 1em 2em;
     background-color: black;
     color: white;
@@ -171,7 +170,10 @@ main {
     flex-direction: column;
     opacity: 0.8;
     display: none;
+    height: 100vh;
+    gap: 8px;
   }
+
   .open-menu-button,
   .close-menu-button {
     display: block;
