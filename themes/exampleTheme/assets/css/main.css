@@ -13,13 +13,12 @@
 html {
   scrollbar-width: none;
 }
-/* p {
-  color: rgba(0, 0, 0, 0.555);
-} */
+
 body {
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   background-color: var(--background-color);
+  overflow: visible;
 }
 
 body::-webkit-scrollbar {
@@ -38,7 +37,7 @@ header {
   height: 8vh;
 }
 
-header .navbar {
+.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +47,7 @@ header .navbar {
 
 header .navbar a {
   text-decoration: none;
+  color: white;
 }
 
 header .logo {
@@ -58,8 +58,13 @@ header .logo {
   border-radius: 50%;
 }
 
-header .menu span {
+.menu span {
   padding-left: 15px;
+}
+
+.open-menu-button,
+.close-menu-button {
+  display: none;
 }
 
 main {
@@ -76,7 +81,7 @@ main {
   padding: 20px;
   width: auto;
   height: 90vh;
-  margin-top: 10vh;
+  padding-top: 10vh;
 }
 
 .hero div {
@@ -115,13 +120,13 @@ main {
 }
 
 .posts-section div span {
-  /* background-color: lightcoral; */
   text-decoration: none;
   display: block;
   width: 85%;
   margin: auto;
   padding-top: 20px;
 }
+
 .posts-section a {
   text-decoration: none;
   color: black;
@@ -137,4 +142,42 @@ main {
   flex-direction: column;
   width: 85%;
   margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Large Screens */
+  .open-menu-button,
+  .close-menu-button {
+    display: none;
+  }
+  .menu span {
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em 2em;
+    background-color: black;
+    color: white;
+    justify-content: start;
+    align-items: end;
+    flex-direction: column;
+    opacity: 0.8;
+    display: none;
+  }
+  .open-menu-button,
+  .close-menu-button {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  /* portrait phones */
 }

@@ -15,12 +15,27 @@ title = 'My New Hugo Site'
     url = "/posts/"
     weight = 2
   [[menu.main]]
-    name = "Tags"
-    pre = "tag"
-    url = "/tags/"
+    name = "Project"
+    pre = "project"
+    url = "/project/"
     weight = 3
   [[menu.main]]
-    name = "Logs"
-    pre = "log"
-    url = "/logs/"
+    name = "About"
+    pre = "about"
+    url = "/about/"
     weight = 4
+  [[menu.main]]
+    name = "Contact"
+    pre = "contact"
+    url = "/contact/"
+    weight = 5
+  [[menu.main]]
+    name = "Resume"
+    pre = "resume"
+    url = "/resume/"
+    weight = 6
+  [[menu.main]]
+    name = "Activity"
+    pre = "activity"
+    url = "/activity/"
+    weight = 7
