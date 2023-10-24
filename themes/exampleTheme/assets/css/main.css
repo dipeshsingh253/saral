@@ -130,3 +130,11 @@ main {
 .posts-section p {
   color: rgba(0, 0, 0, 0.555);
 }
+
+.post-content {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: auto;
+}
