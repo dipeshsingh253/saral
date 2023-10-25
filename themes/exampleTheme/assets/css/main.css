@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Noto+Sans&family=Poppins&display=swap");
 
 :root {
-  --background-color: #f1f1f1;
+  --background-color: rgb(247, 221, 221);
 }
 
 * {
@@ -150,27 +150,6 @@ main {
   border-radius: 30px;
 }
 
-/* Style for code blocks */
-pre {
-  position: relative;
-  border: 1px solid white;
-  border-radius: 5px;
-}
-
-code .hljs {
-  background-color: black;
-}
-
-pre .copy-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #333;
-  color: #fff;
-  padding: 2px 6px;
-  cursor: pointer;
-}
-
 @media only screen and (min-width: 768px) {
   /* Large Screens */
   .open-menu-button,
@@ -220,92 +199,4 @@ pre .copy-button {
   .hero {
     padding-top: 15vh;
   }
-}
-
-/*!
-  Theme: Default
-  Description: Original highlight.js style
-  Author: (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
-  Maintainer: @highlightjs/core-team
-  Website: https://highlightjs.org/
-  License: see project LICENSE
-  Touched: 2021
-*/
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em;
-}
-code.hljs {
-  padding: 3px 5px;
-}
-.hljs {
-  background: black;
-  color: #444;
-}
-.hljs-comment {
-  font-style: italic;
-  color: #697070;
-}
-.hljs-punctuation,
-.hljs-tag {
-  color: #444a;
-}
-.hljs-tag .hljs-attr,
-.hljs-tag .hljs-name {
-  color: #444;
-}
-.hljs-attribute,
-.hljs-doctag,
-.hljs-keyword,
-.hljs-meta .hljs-keyword,
-.hljs-name,
-.hljs-selector-tag {
-  font-weight: 700;
-}
-.hljs-deletion,
-.hljs-number,
-.hljs-quote,
-.hljs-selector-class,
-.hljs-selector-id,
-.hljs-string,
-.hljs-template-tag,
-.hljs-type {
-  color: #800;
-}
-.hljs-section,
-.hljs-title {
-  color: #800;
-  font-weight: 700;
-}
-.hljs-link,
-.hljs-operator,
-.hljs-regexp,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-symbol,
-.hljs-template-variable,
-.hljs-variable {
-  color: #ab5656;
-}
-.hljs-literal {
-  color: #695;
-}
-.hljs-addition,
-.hljs-built_in,
-.hljs-bullet,
-.hljs-code {
-  color: #397300;
-}
-.hljs-meta {
-  color: #1f7199;
-}
-.hljs-meta .hljs-string {
-  color: #38a;
-}
-.hljs-emphasis {
-  font-style: italic;
-}
-.hljs-strong {
-  font-weight: 700;
 }

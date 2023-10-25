@@ -37,25 +37,4 @@ document.addEventListener("DOMContentLoaded", function () {
       openMenuButton.style.display = "block";
     };
   }
-
-  document.querySelectorAll(".copy-button").forEach(function (button) {
-    new ClipboardJS(button, {
-      target: function (trigger) {
-        console.log(trigger);
-        return trigger.parentElement.querySelector("code");
-      },
-    });
-    console.log(button);
-    button.addEventListener("click", function () {
-      console.log("inside copy");
-      button.innerText = "Copied!";
-      setTimeout(function () {
-        button.innerText = "Copy";
-      }, 1000);
-    });
-  });
-
-  document.querySelectorAll("pre code").forEach(function (codeBlock) {
-    hljs.lineNumbersBlock(codeBlock);
-  });
 });

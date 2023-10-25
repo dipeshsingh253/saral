@@ -10,10 +10,10 @@ tags = ['linux','opensource']
 Linux, the open-source operating system, has been a cornerstone of the tech world for decades. Whether you're a budding developer, a system administrator, or just someone who's passionate about tech, learning Linux is a smart move. Here are some compelling reasons why you should consider diving into the world of Linux.
 
 {{< code class="language-java" >}}
-    // this is an italic comment
-    public static void main(String[] args){
-        System.out.println("Hello World!");
-    }
+// this is an italic comment
+public static void main(String[] args){
+System.out.println("Hello World!");
+}
 {{</ code >}}
 
 ### 1. Versatility

@@ -4,4 +4,4 @@
   {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title
   site.Title }}{{ end }}
 </title>
-{{ partialCached "head/css.html" . }} {{ partialCached "head/js.html" . }}
+{{ partialCached "head/css.html" . }}
