@@ -140,7 +140,7 @@ main {
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 70%;
   margin: auto;
 }
 
@@ -162,7 +162,7 @@ main {
 }
 
 @media only screen and (max-width: 767px) {
-  /* phones */
+  /* Phones */
   .menu {
     position: fixed;
     top: 0;
@@ -187,8 +187,7 @@ main {
 }
 
 @media only screen and (max-height: 500px) and (orientation: landscape) {
-  /* portrait phones */
-
+  /* Portrait Phones */
   header {
     height: 15vh;
     background-color: green;
@@ -199,4 +198,20 @@ main {
   .hero {
     padding-top: 15vh;
   }
+}
+
+/* Codeblocks */
+
+pre {
+  overflow-x: auto;
+  border-radius: 3px;
+}
+
+.highlight {
+  overflow-x: auto;
+  border-radius: 5px;
+}
+
+.copy-code {
+  display: none;
 }

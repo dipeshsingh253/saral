@@ -3,12 +3,8 @@ author: "Hugo Authors"
 title: "Markdown Syntax Guide"
 date: "2019-03-11"
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-tags: ["markdown", "css", "html", "themes"]
-categories: ["themes", "syntax"]
-series: ["Themes Guide"]
-aliases: ["migrate-from-jekyl"]
-ShowToc: true
-TocOpen: true
+highlight: true
+highlightstyle: "monokai"
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
@@ -83,36 +79,30 @@ This is pre text
 
 #### Code block with backticks
 
-```
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Example HTML5 Document</title>
-    </head>
-    <body>
-        <p>Test</p>
-    </body>
-</html>
-```
-
-#### Code block with backticks and language specified
-
-```html {linenos=true}
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-    />
   </head>
   <body>
     <p>Test</p>
   </body>
 </html>
+```
+
+#### Code block with backticks and language specified
+
+#### This is java code
+
+```java {linenos=true}
+// this is java code
+
+public static void main(String[] args){
+    System.out.println("Hello World");
+}
+
 ```
 
 #### Code block indented with four spaces
@@ -130,7 +120,7 @@ This is pre text
 
 #### Code block with Hugo's internal highlight shortcode
 
-{{< highlight html >}}
+{{< highlight html "lineNos=true" >}}
 
 <!doctype html>
 <html lang="en">

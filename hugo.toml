@@ -2,3 +2,6 @@ baseURL = 'https://quickstart-hugo.pages.dev/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'exampleTheme'
+
+pygmentsCodefences = true
+pygmentsStyle = "base16-snazzy"

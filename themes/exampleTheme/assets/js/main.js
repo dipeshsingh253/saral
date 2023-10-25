@@ -37,4 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
       openMenuButton.style.display = "block";
     };
   }
+
+  // hljs.highlightAll();
 });
