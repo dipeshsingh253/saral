@@ -4,4 +4,6 @@ title = 'My New Hugo Site'
 theme = 'exampleTheme'
 
 pygmentsCodefences = true
-pygmentsStyle = "base16-snazzy"
+pygmentsStyle = "rose-pine-moon"
+
+guide = https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma
