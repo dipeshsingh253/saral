@@ -42,9 +42,7 @@ The blockquote element represents content that is quoted from another source, op
 
 > Don't communicate by sharing memory, share memory by communicating.
 >
-> — <cite>Rob Pike[^1]</cite>
-
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+> — <cite>Rob Pike</cite>
 
 ## Tables
 
@@ -131,6 +129,8 @@ public static void main(String[] args){
 {{< /highlight >}}
 
 #### Gist
+
+
 
 {{< gist spf13 7896402 >}}
 
