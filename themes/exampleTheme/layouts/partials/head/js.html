@@ -1,5 +1,6 @@
 {{- with resources.Get "js/main.js" }}
 <script src="{{ .RelPermalink }}"></script>
+{{- end }}
 <script>
   document.querySelectorAll("pre > code").forEach((codeblock) => {
     const container = codeblock.parentNode.parentNode;
@@ -53,6 +54,3 @@
     }
   });
 </script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script> -->
-
-{{- end }}

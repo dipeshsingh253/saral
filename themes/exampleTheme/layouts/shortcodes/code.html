@@ -1,8 +1,0 @@
-{{ $code := .Inner }}
-{{ $class := .Get "class" }}
-{{ with $class }}<pre class="hljs {{$class}}">{{ else }}<pre class="hljs">{{ end }}
-<button class="copy-button">Copy</button>
-<code>
-{{- $code -}}
-</code>
-</pre>

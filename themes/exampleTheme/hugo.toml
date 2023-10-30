@@ -3,6 +3,12 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 
 
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags data backup'
+
+
 [menu]
   [[menu.main]]
     name = "Home"

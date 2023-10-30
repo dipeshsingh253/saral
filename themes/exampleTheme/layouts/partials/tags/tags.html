@@ -1,0 +1,11 @@
+<section class="tags">
+  <h1>{{ .Title }}</h1>
+  <div>
+    {{ .Content }} {{ range .Pages }}
+    <span>
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <p>{{ .Summary }}</p>
+    </span>
+    {{end }}
+  </div>
+</section>
