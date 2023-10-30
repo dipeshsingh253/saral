@@ -34,8 +34,3 @@ title = 'My New Hugo Site'
     pre = "resume"
     url = "/resume/"
     weight = 6
-  [[menu.main]]
-    name = "Activity"
-    pre = "activity"
-    url = "/activity/"
-    weight = 7

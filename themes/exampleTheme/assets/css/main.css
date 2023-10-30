@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Noto+Sans&family=Poppins&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 :root {
-  --background-color: rgb(247, 221, 221);
+  --background-color: #212529;
+  --primary-color: #dee2e6;
+  --text-color: #f8f9fa;
+  --accent-color: #dee2e6;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Alkatra";
+  font-family: "Fira Sans";
 }
 
 html {
@@ -19,6 +21,7 @@ body {
   -ms-overflow-style: none;
   background-color: var(--background-color);
   overflow: visible;
+  color: var(--text-color);
 }
 
 body::-webkit-scrollbar {
@@ -29,7 +32,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #9c3f3f;
+  background-color: var(--background-color);
+  color: var(--primary-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -47,11 +51,11 @@ header {
 
 header .navbar a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 header .logo {
-  color: #3498db;
+  color: var(--primary-color);
   font-size: 24px;
   width: 35px;
   height: auto;
@@ -67,20 +71,14 @@ header .logo {
   display: none;
 }
 
-main {
-  height: 90vh;
-}
-
 .hero {
   height: 90vh;
-  background-color: #f0f0f0;
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  width: auto;
-  height: 90vh;
   padding-top: 10vh;
 }
 
@@ -108,7 +106,10 @@ main {
 
 .hero div .socials a {
   text-decoration: none;
+  color: var(--accent-color);
 }
+
+/* Style for post sections in project */
 
 .posts-section {
   background-color: var(--background-color);
@@ -124,32 +125,58 @@ main {
   display: block;
   width: 85%;
   margin: auto;
-  padding-top: 20px;
+  padding-top: 3em;
 }
 
 .posts-section a {
   text-decoration: none;
-  color: black;
+  color: var(--accent-color);
 }
 
 .posts-section p {
-  color: rgba(0, 0, 0, 0.555);
+  color: var(--text-color);
+  padding-top: 10px;
 }
 
+/* style for post page  */
 .post-content {
-  padding-top: 10vh;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  gap: 20px;
   margin: auto;
+  padding: 20px;
+  padding-top: 10vh;
+  width: 80%;
 }
 
 .post-content img {
   display: block;
   margin: auto;
+  width: 100%;
   border-radius: 30px;
 }
 
+.post-meta {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+figcaption {
+  text-align: center;
+  font-size: smaller;
+  font-weight: 100;
+  padding-top: 0.5em;
+  font-style: italic;
+}
+
+.post-data {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gist {
+  z-index: -1;
+}
 @media only screen and (min-width: 768px) {
   /* Large Screens */
   .open-menu-button,
@@ -169,8 +196,8 @@ main {
     left: 0;
     right: 0;
     padding: 1em 2em;
-    background-color: black;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     justify-content: start;
     align-items: end;
     flex-direction: column;
@@ -190,7 +217,7 @@ main {
   /* Portrait Phones */
   header {
     height: 15vh;
-    background-color: green;
+    background-color: var(--background-color);
   }
   .post-content {
     padding-top: 15vh;

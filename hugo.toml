@@ -6,4 +6,4 @@ theme = 'exampleTheme'
 pygmentsCodefences = true
 pygmentsStyle = "rose-pine-moon"
 
-guide = https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma
+guide = "https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma"

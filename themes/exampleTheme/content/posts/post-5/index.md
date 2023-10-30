@@ -5,7 +5,7 @@ draft = false
 tags = ['linux','opensource']
 +++
 
-{{< figure src="linux.png" title="abc"title="title" alt="alt text string" width="70%" height="auto" >}}
+{{< figure src="linux.png" title="linux saying by linus torvalds" alt="alt text string" width="70%" height="auto" >}}
 
 Linux, the open-source operating system, has been a cornerstone of the tech world for decades. Whether you're a budding developer, a system administrator, or just someone who's passionate about tech, learning Linux is a smart move. Here are some compelling reasons why you should consider diving into the world of Linux.
 
