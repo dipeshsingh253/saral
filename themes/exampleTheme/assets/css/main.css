@@ -143,8 +143,12 @@ header .logo {
   width: 80%;
 }
 
+main .posts-section:nth-child(2) {
+  padding-top: 0;
+}
+
 main .posts-section:first-child > h1,
-main .tags:first-child {
+main .tags:first-child > h1 {
   font-size: 2em;
 }
 
@@ -152,8 +156,9 @@ main .tags:first-child {
   padding: 1em;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: start;
-  width: 85%;
+  width: 80%;
   gap: 1em;
 }
 
@@ -306,10 +311,14 @@ blockquote {
   }
   .navbar,
   .post-content,
-  .posts-section {
+  .posts-section,
+  .tags div {
     width: 90%;
   }
 
+  .tags > h1 {
+    width: 90%;
+  }
   .posts-section > h1,
   .posts-section div span {
     width: 100%;

@@ -10,8 +10,6 @@
     {{ end }}
   </section>
 
-  <section class="post-data">
-    {{ .Content }} {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-  </section>
+  <section class="project">{{ .Content }}</section>
 </main>
 {{ end }}
