@@ -1,19 +1,18 @@
 /* Import Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
 /* Variables */
 :root {
-  --background-color: #212529;
-  --primary-color: #dee2e6;
-  --text-color: #f8f9fa;
-  --accent-color: #dee2e6;
+  --background-color: #1d1e20;
+  --primary-color: #dadadb;
+  --text-color: #9b9c9d;
+  --accent-color: #dadadb;
 }
 
 /* Global Styles */
 * {
   margin: 0;
   padding: 0;
-  font-family: "Fira Sans";
+  font-family: "Ubuntu Mono", monospace;
 }
 
 html {
@@ -85,8 +84,12 @@ header .logo {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   padding-top: 10vh;
+}
+
+.hero h1,
+.hero h2 {
+  color: var(--primary-color);
 }
 
 .hero div {
@@ -95,6 +98,8 @@ header .logo {
   align-items: center;
   width: 100%;
   flex-direction: column;
+  gap: 1em;
+  text-align: center;
 }
 
 .hero div img {
@@ -113,7 +118,7 @@ header .logo {
 
 .hero div .socials a {
   text-decoration: none;
-  color: var(--accent-color);
+  color: rebeccapurple;
 }
 
 /* Tags and Posts Section */
@@ -124,7 +129,7 @@ header .logo {
   flex-direction: column;
   align-items: center;
   padding: 35px;
-  padding-top: 12vh;
+  padding-top: 10vh;
 }
 
 .tags > h1,
@@ -177,11 +182,18 @@ header .logo {
   gap: 20px;
   margin: auto;
   padding: 20px;
-  padding-top: 12vh;
+  padding-top: 10vh;
   width: 80%;
 }
 
-.post-content img {
+.post-data,
+h1 h2 h3 h4 h5 h6 {
+  color: var(--primary-color);
+}
+.post-data p {
+  color: var(--text-color);
+}
+.post-data img {
   display: block;
   margin: auto;
   width: 100%;
@@ -192,12 +204,32 @@ header .logo {
   border-bottom: 1px solid var(--accent-color);
 }
 
+.post-meta h1 {
+  /* color: red; */
+  font-weight: 900;
+  font-size: 3em;
+  color: var(--primary-color);
+}
 figcaption {
   text-align: center;
   font-size: smaller;
   font-weight: 100;
   padding-top: 0.5em;
   font-style: italic;
+}
+
+.post-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.post-tags span a {
+  color: var(--accent-color);
+  text-decoration: none;
+  border: 1px solid var(--accent-color);
+  padding: 5px 10px;
+  border-radius: 8px;
 }
 
 .post-data {
