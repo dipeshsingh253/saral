@@ -6,6 +6,7 @@
   --primary-color: #dadadb;
   --text-color: #9b9c9d;
   --accent-color: #dadadb;
+  --links: #663399;
 }
 
 /* Global Styles */
@@ -19,6 +20,10 @@ html {
   scrollbar-width: none;
 }
 
+a {
+  color: var(--links);
+  text-decoration: underline;
+}
 body {
   scroll-behavior: smooth;
   -ms-overflow-style: none;
@@ -84,6 +89,7 @@ header .logo {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   padding-top: 10vh;
 }
 
@@ -113,12 +119,11 @@ header .logo {
   width: 80%;
   max-width: 25rem;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .hero div .socials a {
   text-decoration: none;
-  color: rebeccapurple;
+  color: var(--links);
 }
 
 /* Tags and Posts Section */
@@ -128,13 +133,19 @@ header .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 35px;
+  margin: auto;
   padding-top: 10vh;
+  padding-bottom: 35px;
 }
 
 .tags > h1,
 .posts-section > h1 {
   width: 85%;
+}
+
+main .posts-section:first-child > h1,
+main .tags:first-child {
+  font-size: 2em;
 }
 
 .tags div {
@@ -152,8 +163,9 @@ header .logo {
   padding: 5px 10px;
 }
 
-.tags div span a {
-  color: white;
+.tags div span a,
+.posts-section a {
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -163,11 +175,6 @@ header .logo {
   width: 85%;
   margin: auto;
   padding-top: 3em;
-}
-
-.posts-section a {
-  text-decoration: none;
-  color: var(--accent-color);
 }
 
 .posts-section p {
@@ -238,10 +245,6 @@ figcaption {
   gap: 20px;
 }
 
-.gist {
-  z-index: -1;
-}
-
 /* Table Styles */
 table {
   width: max-content;
@@ -301,12 +304,20 @@ blockquote {
     height: 100vh;
     gap: 8px;
   }
-  .post-content {
+  .navbar,
+  .post-content,
+  .posts-section {
     width: 90%;
+  }
+
+  .posts-section > h1,
+  .posts-section div span {
+    width: 100%;
   }
 
   .hero div .socials {
     width: 100%;
+    flex-wrap: wrap;
   }
   .open-menu-button,
   .close-menu-button {
