@@ -1,0 +1,56 @@
+{{ $projects := index .Site.Data "opensource-contributions" }} {{ range
+$projects }} {{ $username := .username }} {{ $reponame := .reponame }} {{ $owner
+:= .owner }}
+
+<div class="opensource-contribution">
+  <div class="project-heading">
+    <h3>{{ .title }}</h3>
+    {{ with $reponame }} {{ $repoCardURL := printf
+    "https://github-readme-stats.vercel.app/api/pin/?username=%s&repo=%s&theme=dark"
+    $owner . }} {{ with $repoCardURL }}
+    <img src="{{ $repoCardURL }}" alt="" />
+    {{ end }} {{ end }}
+  </div>
+  <div class="project-details">
+    <!-- Display other fields like description, username, reponame, etc. -->
+    <p>{{ .description }}</p>
+    <div class="project-links">
+      {{ $githubURL := printf "https://github.com/%s/%s" $username $reponame }}
+      {{ with $githubURL }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Github</a>
+      {{ end }} {{ with .livedemo }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Demo</a>
+      {{ end }}
+    </div>
+
+    <!-- Display the list of issues -->
+    {{ with .issues }}
+    <h4>Issues:</h4>
+    <ul>
+      {{ range . }}
+      <li>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+          >{{ .title }}</a
+        >
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+
+    <!-- Display the list of PRs -->
+    {{ with .pulls }}
+    <h4>Pulls:</h4>
+    <ul>
+      {{ range . }}
+      <li>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+          >{{ .title }}</a
+        >
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}

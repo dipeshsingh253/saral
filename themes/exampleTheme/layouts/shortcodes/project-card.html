@@ -1,0 +1,41 @@
+{{ $projects := index .Site.Data "projects" }} {{ range $projects }}
+<div class="project-card">
+  {{ $username := .username }} {{ $reponame := .reponame }}
+  <div class="project-heading">
+    <h3>{{ .title }}</h3>
+    {{ with $reponame }} {{ $repoCardURL := printf
+    "https://github-readme-stats.vercel.app/api/pin/?username=%s&repo=%s&theme=dark"
+    $username . }} {{ with $repoCardURL }}
+    <img src="{{ $repoCardURL }}" alt="" />
+    {{ end }} {{ end }}
+  </div>
+  <div class="project-details">
+    <p>{{ .description }}</p>
+    <div class="project-links">
+      {{ $githubURL := printf "https://github.com/%s/%s" $username $reponame }}
+      {{ with $githubURL }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Github</a>
+      {{ end }} {{ with .livedemo }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Demo</a>
+      {{ end }} {{ with .presentation }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+        >Presentation</a
+      >
+      {{ end }}
+    </div>
+    <h4>Features :</h4>
+    <ul>
+      {{ range .features }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+
+    <div class="tech-stack">
+      <h4>Tech Stack :</h4>
+      {{ range .stack }}
+      <img src="https://skillicons.dev/icons?i={{ . }}" alt="" />
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

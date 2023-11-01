@@ -1,0 +1,28 @@
+- title: Springwolf Core
+  description: Automated documentation for event-driven applications built with Spring Boot
+  owner: springwolf
+  username: dipeshsingh253
+  reponame: springwolf-core
+  livedemo: https://github.com/dipeshsingh253/springwolf-core
+  issues:
+    - title: Springwolf Kafka Controller Objectmapper Creation
+      url: https://github.com/springwolf/springwolf-core/issues/357
+    - title: Another Issue
+      url: https://github.com/springwolf/springwolf-core/issues/358
+  pulls:
+    - title: Feature/rewrite example json generator
+      url: https://github.com/springwolf/springwolf-core/pull/394
+- title: Quarkus Test Suite
+  description: Test Suite for Quarkus integration scenarios. Among the standard Quarkus test features, scenarios hardly rely on Quarkus-test-framework features
+  owner: quarkus-qe
+  username: dipeshsingh253
+  reponame: quarkus-test-suite
+  livedemo: https://github.com/dipeshsingh253/qurkus-test-suite
+  issues:
+    - title: Leaking Vertx and HttpClient
+      url: https://github.com/quarkus-qe/quarkus-test-suite/issues/1408
+    - title: Another Issue
+      url: https://github.com/springwolf/springwolf-core/issues/358
+  pulls:
+    - title: "bug-fix : Closed Vert.x to Prevent Resource Leaks"
+      url: https://github.com/quarkus-qe/quarkus-test-suite/pull/1474

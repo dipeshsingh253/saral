@@ -1,18 +1,15 @@
 ---
-title: Project
+title: Projects
 date: 2023-10-31
 draft: false
 layout: project
+hideDate: true
 ---
 
-- ## Personal Projects
-  - ### Supershop : Ecommerce Store
+## Open Source Contributions
 
-<!--
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=dipeshsingh253&repo=SuperShop-Online-Store&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+{{< opensource-contribution >}}
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=dipeshsingh253&repo=SuperShop-Online-Store&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+## Personal Projects
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=dipeshsingh253&repo=SuperShop-Online-Store&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
-
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=dipeshsingh253&repo=SuperShop-Online-Store&theme=dark)](https://github.com/anuraghazra/github-readme-stats) -->
+{{< project-card >}}
