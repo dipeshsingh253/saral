@@ -18,10 +18,15 @@ Let's make this the start of a fantastic conversation. Feel free to reach out, a
 
 Cheers to the future collaborations and coding adventures! 🌟
 
-## 📧 Contact Information:
+### 📧 Reach out via email:
 
-- **Email:** [sindipesh@gmail.com](mailto:sindipesh@gmail.com)
-- **GitHub:** [https://github.com/dipeshsingh253](https://github.com/dipeshsingh253)
-- **LinkedIn:** [https://www.linkedin.com/in/dipeshsingh253](https://www.linkedin.com/in/dipeshsingh253)
+**Email :** [sinhdipesh@gmail.com](mailto:sinhdipesh@gmail.com)
+
+### 🌐 Connect with me online:
+
+[![Discord](https://skillicons.dev/icons?i=discord)](http://discordapp.com/users/849913360144400404)
+[![Twitter](https://skillicons.dev/icons?i=twitter)](https://twitter.com/dipeshSingh_253)
+[![Linkedin](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/dipesh-singh253/)
+[![Github](https://skillicons.dev/icons?i=github)](https://github.com/dipeshsingh253/)
 
 Looking forward to hearing from you soon! 📩

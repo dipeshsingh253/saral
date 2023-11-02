@@ -11,7 +11,7 @@
   <aside>{{ partial "common/toc.html" . }}</aside>
   <section class="project">{{ .Content }}</section>
   {{else}}
-  <section>{{.Content}}</section>
+  <section class="default">{{.Content}}</section>
   {{end}}
 </main>
 {{ end }}

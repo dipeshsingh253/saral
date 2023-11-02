@@ -327,12 +327,6 @@ blockquote {
   gap: 10px;
 }
 
-.project h2 {
-  font-size: 2em;
-}
-.project h3 {
-  font-size: 1.2em;
-}
 .project-details {
   line-height: 2em;
 }
@@ -344,6 +338,21 @@ blockquote {
   padding-top: 1em;
   padding-bottom: 0.5em;
 }
+
+.default {
+  line-height: 2em;
+}
+
+.default h1,
+.default h2,
+.default h3,
+.default h4,
+.default h5,
+.default h6 {
+  padding-top: 1em;
+  padding-bottom: 0.5 em;
+}
+
 /* Media Queries */
 
 @media only screen and (min-width: 768px) {
