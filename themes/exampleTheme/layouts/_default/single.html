@@ -1,17 +1,17 @@
 {{ define "main" }}
 
-<main class="post-content">
-  <section class="post-meta">
-    <h1>{{ .Title }}</h1>
-    {{ if ne .Params.hideDate true }} {{ $dateMachine := .Date | time.Format
-    "2006-01-02T15:04:05-07:00" }} {{ $dateHuman := .Date | time.Format
-    ":date_long" }}
-    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-    {{ end }}
-  </section>
-
-  <section class="post-data">
+<main class="main-content">
+  {{ partial "common/meta-heading.html" . }} {{ if eq .Layout "post" }}
+  <section class="post">
     {{ .Content }} {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
   </section>
+  {{ else if eq .Layout "about" }}
+  <section class="about">{{ .Content }}</section>
+  {{ else if eq .Layout "project" }}
+  <aside>{{ partial "common/toc.html" . }}</aside>
+  <section class="project">{{ .Content }}</section>
+  {{else}}
+  <section>{{.Content}}</section>
+  {{end}}
 </main>
 {{ end }}

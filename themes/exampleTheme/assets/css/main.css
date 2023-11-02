@@ -16,6 +16,14 @@
   font-family: "Ubuntu Mono", monospace;
 }
 
+p,
+li,
+ul,
+td,
+th {
+  font-size: 18px;
+}
+
 html {
   scrollbar-width: none;
 }
@@ -184,6 +192,7 @@ main .tags:first-child > h1 {
   width: 80%;
   margin: auto;
   padding-top: 3em;
+  line-height: 1.5em;
 }
 
 .posts-section p {
@@ -192,7 +201,7 @@ main .tags:first-child > h1 {
 }
 
 /* Post Content Styles */
-.post-content {
+.main-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -202,25 +211,40 @@ main .tags:first-child > h1 {
   width: 80%;
 }
 
-.post-data,
+.post,
+.project,
+.about {
+  line-height: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+}
+
+.post,
 h1 h2 h3 h4 h5 h6 {
   color: var(--primary-color);
 }
-.post-data p {
+.post p {
   color: var(--text-color);
 }
-.post-data img {
+.post img {
   display: block;
   margin: auto;
   width: 100%;
   border-radius: 30px;
 }
 
-.post-meta {
+.meta-heading {
   border-bottom: 1px solid var(--accent-color);
 }
 
-.post-meta h1 {
+.meta-heading h1 {
   /* color: red; */
   font-weight: 900;
   font-size: 3em;
@@ -248,7 +272,7 @@ figcaption {
   border-radius: 8px;
 }
 
-.post-data {
+.post {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -264,8 +288,9 @@ table {
 
 th,
 td {
+  font-size: 16px;
   border-bottom: 1px solid #ddd;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Lists and Blockquote Styles */
@@ -287,20 +312,13 @@ blockquote {
 .opensource-contribution {
   background-color: var(--background-color);
   display: flex;
-  margin: 30px;
+  margin: 30px 0;
   flex-direction: column;
-}
-h2 {
-  color: var(--primary-color);
 }
 
 .project-card h3,
 .opensource-contribution h3 {
   text-decoration: underline;
-  color: var(--primary-color);
-}
-.project-card h4 {
-  color: var(--primary-color);
 }
 .project-heading {
   display: flex;
@@ -309,11 +327,23 @@ h2 {
   gap: 10px;
 }
 
+.project h2 {
+  font-size: 2em;
+}
+.project h3 {
+  font-size: 1.2em;
+}
 .project-details {
-  /* background-color: brown; */
   line-height: 2em;
 }
 
+.about {
+  line-height: 2em;
+}
+.about h2 {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
 /* Media Queries */
 
 @media only screen and (min-width: 768px) {
@@ -346,7 +376,7 @@ h2 {
     gap: 8px;
   }
   .navbar,
-  .post-content,
+  .main-content,
   .posts-section,
   .tags div {
     width: 90%;
@@ -391,7 +421,7 @@ h2 {
     height: 15vh;
     background-color: var(--background-color);
   }
-  .post-content {
+  .main-content {
     padding-top: 15vh;
   }
 
