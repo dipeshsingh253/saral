@@ -7,8 +7,7 @@ postsOnPosts = 10
 
 
 [taxonomies]
-  category = 'categories'
-  tag = 'tags data backup'
+  tag = 'tags'
 
 
 [menu]

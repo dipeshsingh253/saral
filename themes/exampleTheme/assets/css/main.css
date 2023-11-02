@@ -1,19 +1,21 @@
 /* Import Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
+
 /* Variables */
 :root {
-  --background-color: #1d1e20;
-  --primary-color: #dadadb;
-  --text-color: #9b9c9d;
-  --accent-color: #dadadb;
-  --links: #663399;
+  --background-color: #18122b; /* Dark background color */
+  --primary-color: #726da8; /* Primary text color (usually light) */
+  --text-color: #dadadb; /* General text color (usually light) */
+  --accent-color: #f7dba7; /* Accent color (usually dark) */
+  --links: #f7dba7; /* Link color (can be a shade of the accent color) */
+  --navbar: #18122b; /* Color for the navbar (could be an accent color) */
 }
 
 /* Global Styles */
 * {
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu Mono", monospace;
+  font-family: "Ubuntu Mono", monospace; /* Default font */
 }
 
 p,
@@ -21,28 +23,28 @@ li,
 ul,
 td,
 th {
-  font-size: 18px;
+  font-size: 18px; /* Font size for paragraphs, list items, table cells, and headers */
 }
 
 html {
-  scrollbar-width: none;
+  scrollbar-width: none; /* Remove scrollbar in Firefox */
 }
 
 a {
-  color: var(--links);
+  color: var(--links); /* Link color */
   text-decoration: underline;
 }
 
 body {
   scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  background-color: var(--background-color);
-  overflow: visible;
-  color: var(--text-color);
+  -ms-overflow-style: none; /* Remove scrollbar in IE/Edge */
+  background-color: var(--background-color); /* Background color for the body */
+  overflow: visible; /* Allow content overflow */
+  color: var(--text-color); /* Default text color */
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  display: none; /* Remove scrollbar in Webkit browsers */
 }
 
 /* Header Styles */
@@ -50,7 +52,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background-color);
+  background-color: var(--navbar);
   color: var(--primary-color);
   position: fixed;
   top: 0;
@@ -86,7 +88,7 @@ header .logo {
 }
 
 .open-menu-button,
-.close-menu-button {
+close-menu-button {
   display: none;
 }
 
@@ -182,7 +184,7 @@ main .tags:first-child > h1 {
 
 .tags div span a,
 .posts-section a {
-  color: var(--accent-color);
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -230,9 +232,11 @@ h6 {
 h1 h2 h3 h4 h5 h6 {
   color: var(--primary-color);
 }
+
 .post p {
   color: var(--text-color);
 }
+
 .post img {
   display: block;
   margin: auto;
@@ -245,11 +249,11 @@ h1 h2 h3 h4 h5 h6 {
 }
 
 .meta-heading h1 {
-  /* color: red; */
   font-weight: 900;
   font-size: 3em;
   color: var(--primary-color);
 }
+
 figcaption {
   text-align: center;
   font-size: smaller;
@@ -317,9 +321,10 @@ blockquote {
 }
 
 .project-card h3,
-.opensource-contribution h3 {
+opensource-contribution h3 {
   text-decoration: underline;
 }
+
 .project-heading {
   display: flex;
   flex-direction: column;
@@ -334,6 +339,7 @@ blockquote {
 .about {
   line-height: 2em;
 }
+
 .about h2 {
   padding-top: 1em;
   padding-bottom: 0.5em;
