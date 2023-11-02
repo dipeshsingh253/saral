@@ -3,6 +3,7 @@ title = 'Why you should learn Linux ?'
 date = 2023-03-20T11:00:00-07:00
 draft = false
 tags = ['linux','opensource']
+Summary = 'This is a demo summary. This way you can define summary for a post independent of the post content. Also this would be a proper way to write a summary for specific posts when required.'
 +++
 
 {{< figure src="linux.png" title="linux saying by linus torvalds" alt="alt text string" width="70%" height="auto" >}}

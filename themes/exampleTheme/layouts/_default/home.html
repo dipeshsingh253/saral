@@ -18,8 +18,8 @@
   <section class="posts-section">
     <h2>Recent Posts</h2>
     <div>
-      {{ .Content }} {{ range site.RegularPages }} {{ partial
-      "post/listview.html" . }} {{ end }}
+      {{ range first 5 (where .Site.RegularPages "Section" "posts") }} {{
+      partial "post/listview.html" . }} {{ end }}
     </div>
   </section>
 </main>

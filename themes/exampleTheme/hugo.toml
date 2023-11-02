@@ -1,7 +1,9 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-
+author = "John Doe"
+postsOnHome = 5
+postsOnPosts = 10
 
 
 [taxonomies]
@@ -39,4 +41,9 @@ title = 'My New Hugo Site'
     name = "Resume"
     pre = "resume"
     url = "/resume/"
+    weight = 7
+  [[menu.main]]
+    name = "Tags"
+    pre = "tags"
+    url = "/tags/"
     weight = 6

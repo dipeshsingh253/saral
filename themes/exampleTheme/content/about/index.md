@@ -3,12 +3,11 @@ title = 'About Me'
 date = 2023-03-15T11:00:00-07:00
 layout = 'about'
 hideDate = true
-description = 'hey there , I am John Doe. Naam to suna hi hoga !!!'
 +++
 
 Hello, world! 🌎 I'm [Dipesh Singh](https://github.com/dipeshsingh253/), a passionate coding enthusiast and lifelong learner.
 
-<!-- ![Github Profile Card](https://github-stats-alpha.vercel.app/api?username=dipeshsingh253&cc=000&tc=fff&ic=fff&bc=000) -->
+{{< github-profile-card >}}
 
 📖 I craft interactive websites that tell compelling stories.
 🧩 I love diving into algorithms, solving digital puzzles, and creating elegant solutions.
