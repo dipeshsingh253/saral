@@ -24,6 +24,7 @@ ul,
 td,
 th {
   font-size: 18px; /* Font size for paragraphs, list items, table cells, and headers */
+  line-height: 2em;
 }
 
 html {
@@ -324,8 +325,10 @@ blockquote {
   flex-direction: column;
 }
 
+
 .project-card h3,
-opensource-contribution h3 {
+.opensource-contribution h3,
+.about h3 {
   text-decoration: underline;
 }
 

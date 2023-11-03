@@ -16,6 +16,23 @@ My journey spans the vast landscapes of data science, web development, and beyon
 
 Let's collaborate and create something extraordinary, one line of code at a time!
 
+## 🔨 Skills:
+
+### Languages
+
+<!-- [![Languages](https://skillicons.dev/icons?i=js,html,css,java,bash,typescript)](https://skillicons.dev) -->
+{{< skill-icons >}} javascript,html,css,java,bash,typescript {{< /skill-icons >}}
+
+### Frameworks
+
+<!-- [![Frameworks](https://skillicons.dev/icons?i=hibernate,nodejs,spring,tailwind,react,angular)](https://skillicons.dev) -->
+{{< skill-icons >}} hibernate,nodejs,spring,tailwind,react,angular {{< /skill-icons >}}
+
+### Tools 
+
+<!-- [![Tools](https://skillicons.dev/icons?i=git,idea,kafka,linux,maven,mongodb,mysql,neovim,netlify,postman,vim,vscode)](https://skillicons.dev) -->
+{{< skill-icons >}} git,idea,kafka,linux,maven,mongodb,mysql,neovim,netlify,postman,vim,vscode {{< /skill-icons >}}
+
 ## 💫 More About Me:
 
 - 👨‍💼 I'm currently a Software Engineer at [Logwintech](https://logwintech.com/).
@@ -30,3 +47,5 @@ Let's collaborate and create something extraordinary, one line of code at a time
 - 💻 Exploring new tech stacks and building innovative solutions.
 - 🐧 Tinkering with Linux, breaking my setup, and reassembling it. Linux is quite an adventure!
 - ☕ Thriving in hackathons, attending meetups, and immersing myself in tech events.
+
+
