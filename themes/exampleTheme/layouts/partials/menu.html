@@ -12,7 +12,9 @@ Renders a menu for the given menu ID.
 
 {{- with index site.Menus $menuID }}
   <nav class="navbar">
+  <a href="/">
     <img class="logo" src="/images/avatar.jpeg" alt="Avatar">
+  </a>
     <span class="open-menu-button">Menu</span>
     <div class="menu"> 
       <span class="close-menu-button">Close</span>     

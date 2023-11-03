@@ -185,6 +185,10 @@ main .tags:first-child > h1 {
 .tags div span a,
 .posts-section a {
   color: var(--primary-color);
+  /* text-decoration: none; */
+}
+
+.tags div span a{
   text-decoration: none;
 }
 
