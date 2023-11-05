@@ -21,16 +21,19 @@ Let's collaborate and create something extraordinary, one line of code at a time
 ### Languages
 
 <!-- [![Languages](https://skillicons.dev/icons?i=js,html,css,java,bash,typescript)](https://skillicons.dev) -->
+
 {{< skill-icons >}} javascript,html,css,java,bash,typescript {{< /skill-icons >}}
 
 ### Frameworks
 
 <!-- [![Frameworks](https://skillicons.dev/icons?i=hibernate,nodejs,spring,tailwind,react,angular)](https://skillicons.dev) -->
+
 {{< skill-icons >}} hibernate,nodejs,spring,tailwind,react,angular {{< /skill-icons >}}
 
-### Tools 
+### Tools
 
 <!-- [![Tools](https://skillicons.dev/icons?i=git,idea,kafka,linux,maven,mongodb,mysql,neovim,netlify,postman,vim,vscode)](https://skillicons.dev) -->
+
 {{< skill-icons >}} git,idea,kafka,linux,maven,mongodb,mysql,neovim,netlify,postman,vim,vscode {{< /skill-icons >}}
 
 ## 💫 More About Me:
@@ -48,4 +51,19 @@ Let's collaborate and create something extraordinary, one line of code at a time
 - 🐧 Tinkering with Linux, breaking my setup, and reassembling it. Linux is quite an adventure!
 - ☕ Thriving in hackathons, attending meetups, and immersing myself in tech events.
 
+## Experience
 
+{{< details >}}
+
+<summary>Experience</summary>
+<li>Lowintech : SInce : April, 2023 , Present</li>
+{{< /details >}}
+
+## Education
+
+{{< details >}}
+
+<summary>Education</summary>
+<li>BCA : IGNOU : 2023 - 2026</li>
+<li>Full Stack Dev Course : Masai : 2022 - 2023</li>
+{{< /details >}}

@@ -6,9 +6,10 @@
     {{ .Content }} {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
   </section>
   {{ else if eq .Layout "about" }}
-  <section class="about">{{ .Content }}</section>
-  {{ else if eq .Layout "project" }}
-  {{ partial "common/toc.html" . }}
+  <section class="about">
+    {{ .Content }}
+  </section>
+  {{ else if eq .Layout "project" }} {{ partial "common/toc.html" . }}
   <section class="project">{{ .Content }}</section>
   {{else}}
   <section class="default">{{.Content}}</section>
