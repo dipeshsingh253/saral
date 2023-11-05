@@ -42,10 +42,22 @@ body {
   background-color: var(--background-color); /* Background color for the body */
   overflow: visible; /* Allow content overflow */
   color: var(--text-color); /* Default text color */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body::-webkit-scrollbar {
   display: none; /* Remove scrollbar in Webkit browsers */
+}
+
+main
+{
+  flex-grow: 1;
+}
+
+footer{
+  text-align: center;
 }
 
 /* Header Styles */
@@ -74,6 +86,7 @@ header {
 header .navbar a {
   text-decoration: none;
   color: var(--text-color);
+  font-size: 18px;
 }
 
 header .logo {
