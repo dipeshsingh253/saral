@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", updateMenuDisplay);
 
   if (openMenuButton) {
-    console.log(openMenuButton);
     openMenuButton.onclick = function () {
       menu.style.display = "flex";
       openMenuButton.style.display = "none";

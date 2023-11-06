@@ -3,19 +3,20 @@
 
 /* Variables */
 :root {
-  --background-color: #18122b; /* Dark background color */
-  --primary-color: #726da8; /* Primary text color (usually light) */
-  --text-color: #dadadb; /* General text color (usually light) */
-  --accent-color: #f7dba7; /* Accent color (usually dark) */
-  --links: #f7dba7; /* Link color (can be a shade of the accent color) */
-  --navbar: #726da8; /* Color for the navbar (could be an accent color) */
+  --background-color: #18122b;
+  --primary-color: #726da8;
+  --text-color: white;
+  --accent-color: #f7dba7;
+  --links: var(--accent-color);
+  --navbar: var(--primary-color);
+  --image-border-color: black;
 }
 
 /* Global Styles */
 * {
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu Mono", monospace; /* Default font */
+  font-family: "Ubuntu Mono", monospace;
 }
 
 p,
@@ -23,7 +24,7 @@ li,
 ul,
 td,
 th {
-  font-size: 18px; /* Font size for paragraphs, list items, table cells, and headers */
+  font-size: 18px;
   line-height: 2em;
 }
 
@@ -41,27 +42,27 @@ p {
 }
 
 html {
-  scrollbar-width: none; /* Remove scrollbar in Firefox */
+  scrollbar-width: none;
 }
 
 a {
-  color: var(--links); /* Link color */
+  color: var(--links);
   text-decoration: underline;
 }
 
 body {
   scroll-behavior: smooth;
-  -ms-overflow-style: none; /* Remove scrollbar in IE/Edge */
-  background-color: var(--background-color); /* Background color for the body */
-  overflow: visible; /* Allow content overflow */
-  color: var(--text-color); /* Default text color */
+  background-color: var(--background-color);
+  color: var(--text-color);
   height: 100vh;
   display: flex;
   flex-direction: column;
+  animation: bugfix infinite 1s;
+  -webkit-animation: bugfix infinite 1s;
 }
 
 body::-webkit-scrollbar {
-  display: none; /* Remove scrollbar in Webkit browsers */
+  display: none;
 }
 
 main {
@@ -78,7 +79,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--navbar);
-  color: var(--primary-color);
+  color: var(--background-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -89,9 +90,8 @@ header {
 
 .navbar {
   display: flex;
-  justify-content: center;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 80%;
 }
 
@@ -101,21 +101,117 @@ header .navbar a {
   font-size: 18px;
 }
 
-header .logo {
-  color: var(--primary-color);
+header img {
   font-size: 24px;
   width: 35px;
   height: auto;
   border-radius: 50%;
 }
 
-.menu span {
-  padding-left: 15px;
+#overlay-button {
+  position: absolute;
+  right: 1.5em;
+  padding: 26px 11px;
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
 }
 
-.open-menu-button,
-close-menu-button {
+#overlay-button span {
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  background-color: var(--text-color);
+  position: relative;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+#overlay-button span:before,
+#overlay-button span:after {
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  background-color: var(--text-color);
+  position: absolute;
+  content: "";
+  transition: all 0.2s ease-in-out;
+}
+
+#overlay-button span:before {
+  top: -10px;
+  visibility: visible;
+}
+
+#overlay-button span:after {
+  top: 10px;
+}
+
+#overlay-button:hover span,
+#overlay-button:hover span:before,
+#overlay-button:hover span:after {
+  background: var(--background-color);
+}
+
+input[type="checkbox"] {
   display: none;
+}
+
+input[type="checkbox"]:checked ~ #overlay {
+  visibility: visible;
+}
+
+input[type="checkbox"]:checked ~ #overlay-button:hover span,
+input[type="checkbox"]:checked ~ #overlay-button span {
+  background: transparent;
+}
+
+input[type="checkbox"]:checked ~ #overlay-button span:before {
+  transform: rotate(45deg) translate(7px, 7px);
+  opacity: 1;
+}
+
+input[type="checkbox"]:checked ~ #overlay-button span:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+#overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  visibility: hidden;
+  z-index: 3;
+}
+
+#overlay.active {
+  visibility: visible;
+}
+
+#overlay ul {
+  background-color: var(--navbar);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#overlay ul li {
+  padding: 1em;
+}
+
+#overlay ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#overlay ul li a:hover {
+  color: var(--background-color);
 }
 
 /* Hero Section Styles */
@@ -149,7 +245,7 @@ close-menu-button {
   width: 120px;
   height: auto;
   border-radius: 50%;
-  border: 5px solid black;
+  border: 5px solid var(--image-border-color);
 }
 
 .hero div .socials {
@@ -180,10 +276,6 @@ close-menu-button {
   width: 80%;
 }
 
-main .posts-section:nth-child(2) {
-  padding-top: 0;
-}
-
 main .posts-section:first-child > h1,
 main .tags:first-child > h1 {
   font-weight: 900;
@@ -211,7 +303,6 @@ main .tags:first-child > h1 {
 .tags div span a,
 .posts-section a {
   color: var(--primary-color);
-  /* text-decoration: none; */
 }
 
 .tags div span a {
@@ -248,11 +339,6 @@ main .tags:first-child > h1 {
   line-height: 1.5em;
 }
 
-.post,
-h1 h2 h3 h4 h5 h6 {
-  color: var(--primary-color);
-}
-
 .post p {
   color: var(--text-color);
 }
@@ -264,14 +350,11 @@ h1 h2 h3 h4 h5 h6 {
   border-radius: 30px;
 }
 
-.meta-heading {
-  border-bottom: 1px solid var(--accent-color);
-}
-
 .meta-heading h1 {
   font-weight: 900;
   font-size: 3em;
   color: var(--primary-color);
+  border-bottom: 1px solid var(--accent-color);
 }
 
 figcaption {
@@ -377,24 +460,39 @@ blockquote {
 .default h5,
 .default h6 {
   padding-top: 1em;
-  padding-bottom: 0.5 em;
+  padding-bottom: 0.5em;
 }
 
 /* Media Queries */
-
 @media only screen and (min-width: 768px) {
-  /* Large Screens */
   .open-menu-button,
   .close-menu-button {
     display: none;
   }
-  .menu span {
-    padding-left: 15px;
+
+  #overlay-button {
+    display: none;
+  }
+
+  #overlay {
+    position: static;
+    visibility: visible;
+    opacity: 0.8;
+  }
+
+  #overlay ul {
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  #overlay ul li {
+    padding: 0;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  /* Phones */
   .menu {
     position: fixed;
     top: 0;
@@ -411,6 +509,7 @@ blockquote {
     height: 100vh;
     gap: 8px;
   }
+
   .navbar,
   .main-content,
   .posts-section,
@@ -429,6 +528,7 @@ blockquote {
   .opensource-contribution img {
     width: 100%;
   }
+
   .tech-stack img {
     width: auto;
   }
@@ -436,6 +536,7 @@ blockquote {
   .tags > h1 {
     width: 90%;
   }
+
   .posts-section > h1,
   .posts-section div span {
     width: 100%;
@@ -445,21 +546,23 @@ blockquote {
     width: 100%;
     flex-wrap: wrap;
   }
+
   .open-menu-button,
   .close-menu-button {
     display: block;
   }
+
   .timeline-area div {
     width: 95%;
   }
 }
 
 @media only screen and (max-height: 500px) and (orientation: landscape) {
-  /* Portrait Phones */
   header {
     height: 15vh;
     background-color: var(--background-color);
   }
+
   .main-content {
     padding-top: 15vh;
   }
@@ -467,28 +570,28 @@ blockquote {
   .navbar {
     width: 90%;
   }
+
   .hero {
     padding-top: 15vh;
   }
 }
 
 /* Code Blocks */
+pre,
+code,
+.highlight {
+  background-color: #0d1117;
+}
+
 pre {
   border-radius: 3px;
   padding: 20px;
   position: relative;
   overflow-x: auto;
-  background-color: #0d1117;
 }
 
 code {
   padding: 2px 6px;
-  background-color: #0d1117;
-}
-
-pre code {
-  padding: 0;
-  background-color: #0d1117;
 }
 
 .highlight {
@@ -515,7 +618,6 @@ pre code {
 }
 
 .timeline-area div {
-  /* background-color: var(--primary-color); */
   border-radius: 5px;
   padding: 10px 25px;
   border: 1px solid var(--accent-color);
@@ -540,4 +642,22 @@ pre code {
 
 .timeline-area p {
   margin-bottom: 0;
+}
+
+@keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
+
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
 }

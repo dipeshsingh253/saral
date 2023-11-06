@@ -11,16 +11,17 @@ Renders a menu for the given menu ID.
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-  <nav class="navbar">
-  <a href="/">
-    <img class="logo" src="/images/avatar.jpeg" alt="Avatar">
-  </a>
-    <span class="open-menu-button">Menu</span>
-    <div class="menu"> 
-      <span class="close-menu-button">Close</span>     
-        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </div>
-  </nav>
+<nav class="navbar">
+<img src="/images/avatar.jpeg" alt="Avatar">
+<!-- <p>John Doe</p> -->
+<input type="checkbox" id="overlay-input" />
+<label for="overlay-input" id="overlay-button"><span></span></label>
+  <div id="overlay">
+    <ul>
+      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+    </ul>
+  </div>
+</nav>
 {{- end }}
 
 {{- define "partials/inline/menu/walk.html" }}
@@ -32,7 +33,7 @@ Renders a menu for the given menu ID.
     {{- else if $page.HasMenuCurrent .Menu .}}
       {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
     {{- end }}
-    <span>
+    <li>
       <a
         {{- range $k, $v := $attrs }}
           {{- with $v }}
@@ -41,10 +42,10 @@ Renders a menu for the given menu ID.
         {{- end -}}
       >{{ or (T .Identifier) .Name | safeHTML }}</a>
       {{- with .Children }}
-        <span>
+        <li>
           {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-        </span>
+        </li>
       {{- end }}
-    </span>
+    </li>
   {{- end }}
 {{- end }}
