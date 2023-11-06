@@ -13,10 +13,10 @@ Feel free to navigate through the timeline to discover more about my educational
 
 Let's embark on this journey together! 🌟
 
-# Experience :
+# 💼 Experience :
 
 {{< timeline experience >}}
 
-# Education :
+# 🎓 Education :
 
 {{< timeline education >}}
