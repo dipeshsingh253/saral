@@ -8,7 +8,7 @@
   --text-color: #dadadb; /* General text color (usually light) */
   --accent-color: #f7dba7; /* Accent color (usually dark) */
   --links: #f7dba7; /* Link color (can be a shade of the accent color) */
-  --navbar: #18122b; /* Color for the navbar (could be an accent color) */
+  --navbar: #726da8; /* Color for the navbar (could be an accent color) */
 }
 
 /* Global Styles */
@@ -229,7 +229,6 @@ main .tags:first-child > h1 {
 
 .posts-section p {
   color: var(--text-color);
-  padding-top: 10px;
 }
 
 /* Post Content Styles */
