@@ -450,6 +450,9 @@ blockquote {
   .close-menu-button {
     display: block;
   }
+  .timeline-area div {
+    width: 95%;
+  }
 }
 
 @media only screen and (max-height: 500px) and (orientation: landscape) {

@@ -5,7 +5,7 @@ draft = false
 tags = [ "webdevs", "security"]
 +++
 
-Website security is a top priority in today's digital landscape. One fundamental aspect of web security is implementing HTTPS (Hypertext Transfer Protocol Secure) to encrypt data transmitted between your website and its visitors. In this blog post, we'll discuss the importance of HTTPS, how to obtain an SSL/TLS certificate, and how to configure it on your web server to secure your website.
+Website security is a top priority in today's digital landscape. One fundamental aspect of web security is implementing HTTPS (Hypertext Transfer Protocol Secure) to encrypt data transmitted between your website and its visitors.<!--more--> In this blog post, we'll discuss the importance of HTTPS, how to obtain an SSL/TLS certificate, and how to configure it on your web server to secure your website.
 
 ## The Importance of HTTPS
 

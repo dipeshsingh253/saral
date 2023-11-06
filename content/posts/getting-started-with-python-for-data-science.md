@@ -5,7 +5,7 @@ draft = false
 tags = ["introduction", "development", "python"]
 +++
 
-Python has established itself as the go-to programming language for data science. Its simplicity, vast library ecosystem, and a supportive community make it an ideal choice for data analysis and machine learning. In this blog post, we'll explore the basics of Python for data science, focusing on the key libraries and tools that every aspiring data scientist should be familiar with.
+Python has established itself as the go-to programming language for data science. Its simplicity, vast library ecosystem, and a supportive community make it an ideal choice for data analysis and machine learning.<!--more--> In this blog post, we'll explore the basics of Python for data science, focusing on the key libraries and tools that every aspiring data scientist should be familiar with.
 
 ## Python for Data Science
 

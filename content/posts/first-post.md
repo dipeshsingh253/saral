@@ -7,7 +7,7 @@ layout = 'post'
 tags = [ "testing"]
 +++
 
-Let s talk about linux :
+Let s talk about linux : Linux is one of the most famour operating system used by developers and tech enthusiasts. It is very powerful and secure as it is an open source operating system.<!--more-->
 
 ### List of most pupular linux distros :
 
