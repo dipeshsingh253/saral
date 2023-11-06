@@ -35,14 +35,20 @@ postsOnPosts = 10
     name = "Contact"
     pre = "contact"
     url = "/contact/"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name = "Resume"
     pre = "resume"
     url = "/resume/"
-    weight = 7
+    weight = 8
   [[menu.main]]
     name = "Tags"
     pre = "tags"
     url = "/tags/"
-    weight = 6
+    weight = 7
+  [[menu.main]]
+   name = "Journey"
+   pre = "journey"
+   url = "/journey/"
+   weight = 5
+  

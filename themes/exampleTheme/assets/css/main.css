@@ -27,6 +27,19 @@ th {
   line-height: 2em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+}
+
+p {
+  margin-bottom: 1em;
+}
+
 html {
   scrollbar-width: none; /* Remove scrollbar in Firefox */
 }
@@ -51,12 +64,11 @@ body::-webkit-scrollbar {
   display: none; /* Remove scrollbar in Webkit browsers */
 }
 
-main
-{
+main {
   flex-grow: 1;
 }
 
-footer{
+footer {
   text-align: center;
 }
 
@@ -202,7 +214,7 @@ main .tags:first-child > h1 {
   /* text-decoration: none; */
 }
 
-.tags div span a{
+.tags div span a {
   text-decoration: none;
 }
 
@@ -235,15 +247,6 @@ main .tags:first-child > h1 {
 .project,
 .about {
   line-height: 1.5em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--primary-color);
 }
 
 .post,
@@ -337,7 +340,6 @@ blockquote {
   margin: 30px 0;
   flex-direction: column;
 }
-
 
 .project-card h3,
 .opensource-contribution h3,
@@ -502,4 +504,38 @@ pre code {
   padding: 5px 10px;
   border: none;
   cursor: pointer;
+}
+
+.timeline-area {
+  margin: 2em;
+  border-left: 2px solid var(--accent-color);
+  padding: 0 20px 0 30px;
+}
+
+.timeline-area div {
+  /* background-color: var(--primary-color); */
+  border-radius: 5px;
+  padding: 10px 25px;
+  border: 1px solid var(--accent-color);
+  position: relative;
+  height: auto;
+  min-height: 110px;
+  margin-bottom: 28px;
+}
+
+.timeline-area div::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 3px solid var(--accent-color);
+  position: absolute;
+  top: 10px;
+  left: -40px;
+}
+
+.timeline-area p {
+  margin-bottom: 0;
 }

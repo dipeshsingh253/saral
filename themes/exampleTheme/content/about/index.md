@@ -36,6 +36,54 @@ Let's collaborate and create something extraordinary, one line of code at a time
 
 {{< skill-icons >}} git,idea,kafka,linux,maven,mongodb,mysql,neovim,netlify,postman,vim,vscode {{< /skill-icons >}}
 
+## 💼 Experience
+
+{{< details >}}
+
+<summary>Experience</summary>
+<div class="details-item">
+  <div>
+    <strong>Organization:</strong> Logwintech Pvt. Ltd.
+  </div>
+  <div>
+    <strong>Position:</strong> Software Engineer
+  </div>
+  <div>
+    <strong>Employment Duration:</strong> April 2023 - Present
+  </div>
+</div>
+
+{{< /details >}}
+
+## 🎓 Education
+
+{{< details >}}
+
+<summary>Education</summary>
+<div class="details-item">
+  <div>
+    <strong>Organization:</strong> IGNOU : Indira Gandhi National Open University
+  </div>
+  <div>
+    <strong>Course:</strong> Bachelor Of Computer Application (BCA)
+  </div>
+  <div>
+    <strong>Duration:</strong> 2023 - 2026
+  </div>
+</div>
+<div class="details-item">
+  <div>
+    <strong>Organization:</strong> Masai
+  </div>
+  <div>
+    <strong>Course:</strong> Full Stack Developer Course
+  </div>
+  <div>
+    <strong>Duration:</strong> April 2022 - January 2023
+  </div>
+</div>
+{{< /details >}}
+
 ## 💫 More About Me:
 
 - 👨‍💼 I'm currently a Software Engineer at [Logwintech](https://logwintech.com/).
@@ -50,20 +98,3 @@ Let's collaborate and create something extraordinary, one line of code at a time
 - 💻 Exploring new tech stacks and building innovative solutions.
 - 🐧 Tinkering with Linux, breaking my setup, and reassembling it. Linux is quite an adventure!
 - ☕ Thriving in hackathons, attending meetups, and immersing myself in tech events.
-
-## Experience
-
-{{< details >}}
-
-<summary>Experience</summary>
-<li>Lowintech : SInce : April, 2023 , Present</li>
-{{< /details >}}
-
-## Education
-
-{{< details >}}
-
-<summary>Education</summary>
-<li>BCA : IGNOU : 2023 - 2026</li>
-<li>Full Stack Dev Course : Masai : 2022 - 2023</li>
-{{< /details >}}

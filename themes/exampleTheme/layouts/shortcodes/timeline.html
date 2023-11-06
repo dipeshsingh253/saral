@@ -1,0 +1,13 @@
+{{ $file := .Get 0 }} {{ $timeLinedata := index .Site.Data $file }}
+
+<section class="timeline-area">
+  {{ range $timeLinedata }}
+
+  <div>
+    <p><strong> {{ .title }} </strong></p>
+    <p>{{ .description }}</p>
+    <p>{{ .time }}</p>
+  </div>
+
+  {{ end }}
+</section>
