@@ -10,6 +10,7 @@
   --links: var(--accent-color);
   --navbar: var(--primary-color);
   --image-border-color: black;
+  --navbar-height: 55px; /* We can use this to define padding for many elements. */
 }
 
 /* Global Styles */
@@ -84,7 +85,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 55px;
+  height: var(--navbar-height);
   z-index: 999;
 }
 
@@ -223,7 +224,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  padding-top: 10vh;
+  padding-top: var(--navbar-height);
 }
 
 .hero h1,
@@ -267,7 +268,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  padding-top: 10vh;
+  padding-top: var(--navbar-height);
   padding-bottom: 35px;
 }
 
@@ -329,7 +330,7 @@ main .tags:first-child > h1 {
   gap: 20px;
   margin: auto;
   padding: 20px;
-  padding-top: 10vh;
+  padding-top: var(--navbar-height);
   width: 80%;
 }
 
@@ -558,7 +559,6 @@ blockquote {
 }
 
 @media only screen and (max-height: 500px) and (orientation: landscape) {
-
   .main-content {
     padding-top: 15vh;
   }
