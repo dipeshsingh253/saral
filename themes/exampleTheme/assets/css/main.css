@@ -351,11 +351,14 @@ main .tags:first-child > h1 {
   border-radius: 30px;
 }
 
+.meta-heading {
+  border-bottom: 1px solid var(--accent-color);
+}
+
 .meta-heading h1 {
   font-weight: 900;
   font-size: 3em;
   color: var(--primary-color);
-  border-bottom: 1px solid var(--accent-color);
 }
 
 figcaption {
