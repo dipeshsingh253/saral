@@ -84,7 +84,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 8vh;
+  height: 55px;
   z-index: 999;
 }
 
@@ -110,7 +110,7 @@ header img {
 
 #overlay-button {
   position: absolute;
-  right: 1.5em;
+  right: 17px;
   padding: 26px 11px;
   z-index: 5;
   cursor: pointer;
@@ -121,7 +121,7 @@ header img {
   height: 4px;
   width: 35px;
   border-radius: 2px;
-  background-color: var(--text-color);
+  background-color: var(--background-color);
   position: relative;
   display: block;
   transition: all 0.2s ease-in-out;
@@ -132,7 +132,7 @@ header img {
   height: 4px;
   width: 35px;
   border-radius: 2px;
-  background-color: var(--text-color);
+  background-color: var(--background-color);
   position: absolute;
   content: "";
   transition: all 0.2s ease-in-out;
@@ -558,10 +558,6 @@ blockquote {
 }
 
 @media only screen and (max-height: 500px) and (orientation: landscape) {
-  header {
-    height: 15vh;
-    background-color: var(--background-color);
-  }
 
   .main-content {
     padding-top: 15vh;
