@@ -111,7 +111,7 @@ header img {
 
 #overlay-button {
   position: absolute;
-  right: 17px;
+  right: 10px;
   padding: 26px 11px;
   z-index: 5;
   cursor: pointer;
@@ -310,12 +310,12 @@ main .tags:first-child > h1 {
   text-decoration: none;
 }
 
-.posts-section div span {
+.post-element {
   text-decoration: none;
   display: block;
   width: 80%;
   margin: auto;
-  padding-top: 3em;
+  padding-top: 2em;
   line-height: 1.5em;
 }
 

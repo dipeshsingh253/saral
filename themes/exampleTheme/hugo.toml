@@ -1,14 +1,11 @@
-baseURL = 'https://example.org/'
+baseURL = 'http://192.168.29.7:1313'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 author = "John Doe"
-postsOnHome = 5
-postsOnPosts = 10
 
 
 [taxonomies]
   tag = 'tags'
-
 
 [menu]
   [[menu.main]]
