@@ -2,6 +2,7 @@
 title = 'An Introduction to Containers'
 date = 2023-11-02T15:03:53+03:00
 draft = false
+layout = 'post'
 tags = ["docker", "containers", "devops"]
 +++
 

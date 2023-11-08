@@ -2,6 +2,7 @@
 title: Introduction to Machine Learning
 date: 2023-11-02T14:56:33+03:00
 draft: false
+layout: post
 tags:
   - introduction
   - python

@@ -2,6 +2,7 @@
 title = 'Markdown Demo'
 date = 2023-11-07T08:36:15+03:00
 draft = false
+layout = 'post'
 tags = ["docker", "containers", "devops"]
 +++
 

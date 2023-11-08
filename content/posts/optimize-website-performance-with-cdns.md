@@ -2,6 +2,7 @@
 title = 'Optimize Website Performance With Cdns'
 date = 2023-11-02T15:05:17+03:00
 draft = false
+layout = 'post'
 tags = ["webdevs", "cdn"]
 +++
 

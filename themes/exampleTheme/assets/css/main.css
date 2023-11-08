@@ -3,12 +3,29 @@
 
 /* Variables */
 :root {
-  --background-color: #18122b;
-  --primary-color: #726da8;
-  --text-color: white;
-  --accent-color: #f7dba7;
-  --links: var(--accent-color);
+  --background-color: black;
+  --primary-color: black;
+  --heading-color: white;
+  --text-color: rgb(126, 124, 124);
+  --accent-color: rgb(126, 124, 124);
+  --links: rebeccapurple;
   --navbar: var(--primary-color);
+  --navbar-button-color: white;
+  --decoration-border-color: white;
+  --image-border-color: white;
+  --navbar-height: 55px; /* We can use this to define padding for many elements. */
+}
+
+:root.light-mode {
+  --background-color: white;
+  --primary-color: white;
+  --heading-color: black;
+  --text-color: rgb(126, 124, 124);
+  --accent-color: rgb(126, 124, 124);
+  --links: rebeccapurple;
+  --navbar: var(--primary-color);
+  --navbar-button-color: black;
+  --decoration-border-color: black;
   --image-border-color: black;
   --navbar-height: 55px; /* We can use this to define padding for many elements. */
 }
@@ -35,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--primary-color);
+  color: var(--heading-color);
 }
 
 p {
@@ -55,7 +72,7 @@ body {
   scroll-behavior: smooth;
   background-color: var(--background-color);
   color: var(--text-color);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   animation: bugfix infinite 1s;
@@ -98,10 +115,17 @@ header {
 
 header .navbar a {
   text-decoration: none;
-  color: var(--text-color);
+  color: white;
   font-size: 18px;
 }
 
+.navbar button {
+  background-color: var(--navbar);
+  border: none;
+  color: var(--navbar-button-color);
+  font-size: 18px;
+  cursor: pointer;
+}
 header img {
   font-size: 24px;
   width: 35px;
@@ -122,7 +146,7 @@ header img {
   height: 4px;
   width: 35px;
   border-radius: 2px;
-  background-color: var(--background-color);
+  background-color: var(--navbar-button-color);
   position: relative;
   display: block;
   transition: all 0.2s ease-in-out;
@@ -133,7 +157,7 @@ header img {
   height: 4px;
   width: 35px;
   border-radius: 2px;
-  background-color: var(--background-color);
+  background-color: var(--navbar-button-color);
   position: absolute;
   content: "";
   transition: all 0.2s ease-in-out;
@@ -151,7 +175,7 @@ header img {
 #overlay-button:hover span,
 #overlay-button:hover span:before,
 #overlay-button:hover span:after {
-  background: var(--background-color);
+  background: var(--navbar-button-color);
 }
 
 input[type="checkbox"] {
@@ -207,29 +231,23 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 }
 
 #overlay ul li a {
-  color: var(--text-color);
+  color: var(--navbar-button-color);
   text-decoration: none;
 }
 
 #overlay ul li a:hover {
-  color: var(--background-color);
+  color: var(--accent-color);
 }
 
 /* Hero Section Styles */
 .hero {
   height: 90vh;
-  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
   padding-top: var(--navbar-height);
-}
-
-.hero h1,
-.hero h2 {
-  color: var(--primary-color);
 }
 
 .hero div {
@@ -263,7 +281,6 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 /* Tags and Posts Section */
 .tags,
 .posts-section {
-  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -281,8 +298,7 @@ main .posts-section:first-child > h1,
 main .tags:first-child > h1 {
   font-weight: 900;
   font-size: 3em;
-  color: var(--primary-color);
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--decoration-border-color);
 }
 
 .tags div {
@@ -296,14 +312,14 @@ main .tags:first-child > h1 {
 }
 
 .tags div span {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--decoration-border-color);
   border-radius: 8px;
   padding: 5px 10px;
 }
 
 .tags div span a,
 .posts-section a {
-  color: var(--primary-color);
+  color: var(--heading-color);
 }
 
 .tags div span a {
@@ -352,13 +368,12 @@ main .tags:first-child > h1 {
 }
 
 .meta-heading {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--decoration-border-color);
 }
 
 .meta-heading h1 {
   font-weight: 900;
   font-size: 3em;
-  color: var(--primary-color);
 }
 
 figcaption {
@@ -378,7 +393,7 @@ figcaption {
 .post-tags span a {
   color: var(--accent-color);
   text-decoration: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--decoration-border-color);
   padding: 5px 10px;
   border-radius: 8px;
 }
@@ -421,7 +436,6 @@ blockquote {
 
 .project-card,
 .opensource-contribution {
-  background-color: var(--background-color);
   display: flex;
   margin: 30px 0;
   flex-direction: column;
@@ -497,23 +511,6 @@ blockquote {
 }
 
 @media only screen and (max-width: 767px) {
-  .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 1em 2em;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    justify-content: start;
-    align-items: end;
-    flex-direction: column;
-    opacity: 0.8;
-    display: none;
-    height: 100vh;
-    gap: 8px;
-  }
-
   .navbar,
   .main-content,
   .posts-section,
@@ -612,14 +609,14 @@ code {
 
 .timeline-area {
   margin: 2em;
-  border-left: 2px solid var(--accent-color);
+  border-left: 2px solid var(--decoration-border-color);
   padding: 0 20px 0 30px;
 }
 
 .timeline-area div {
   border-radius: 5px;
   padding: 10px 25px;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--decoration-border-color);
   position: relative;
   height: auto;
   min-height: 110px;
@@ -632,8 +629,8 @@ code {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--primary-color);
-  border: 3px solid var(--accent-color);
+  background-color: var(--background-color);
+  border: 3px solid var(--decoration-border-color);
   position: absolute;
   top: 10px;
   left: -40px;

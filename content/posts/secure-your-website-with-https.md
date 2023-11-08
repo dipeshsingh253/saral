@@ -2,6 +2,7 @@
 title = 'Secure Your Website With Https'
 date = 2023-11-02T15:01:19+03:00
 draft = false
+layout = 'post'
 tags = [ "webdevs", "security"]
 +++
 

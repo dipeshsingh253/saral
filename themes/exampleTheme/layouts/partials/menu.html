@@ -12,13 +12,16 @@ Renders a menu for the given menu ID.
 
 {{- with index site.Menus $menuID }}
 <nav class="navbar">
-<img src="/images/avatar.jpeg" alt="Avatar">
-<!-- <p>John Doe</p> -->
+  <a href="/">
+    <img src="/images/avatar.jpeg" alt="Avatar">
+    <!-- <p>John Doe</p> -->
+  </a>
 <input type="checkbox" id="overlay-input" />
 <label for="overlay-input" id="overlay-button"><span></span></label>
   <div id="overlay">
     <ul>
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+      <li><button id="mode-toggle">☀️</button></li>
     </ul>
   </div>
 </nav>

@@ -2,6 +2,7 @@
 title = 'Best Practices for Data Backup and Recovery'
 date = 2023-11-02T15:03:13+03:00
 draft = false
+layout = 'post'
 tags = ["databackup", "hacks"]
 +++
 

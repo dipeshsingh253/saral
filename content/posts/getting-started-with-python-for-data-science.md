@@ -2,6 +2,7 @@
 title = 'Getting Started With Python for Data Science'
 date = 2023-11-02T14:59:27+03:00
 draft = false
+layout = 'post'
 tags = ["introduction", "development", "python"]
 +++
 

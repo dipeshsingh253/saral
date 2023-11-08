@@ -1,39 +1,25 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-  var openMenuButton = document.getElementsByClassName("open-menu-button")[0];
-  var closeMenuButton = document.getElementsByClassName("close-menu-button")[0];
+  // Get the mode toggle button
+  const modeToggle = document.getElementById("mode-toggle");
+  // Check if the user has a stored preference and apply it
+  if (localStorage.getItem("theme") == "light") {
+    document.documentElement.classList.add("light-mode");
+    modeToggle.innerText = "🌕";
+  } else {
+    modeToggle.innerText = "☀️";
+  }
+  // Add an event listener to the button
+  modeToggle.addEventListener("click", () => {
+    // Toggle the dark-mode class on the :root element
+    document.documentElement.classList.toggle("light-mode");
 
-  var menu = document.getElementsByClassName("menu")[0];
-
-  function updateMenuDisplay() {
-    if (window.innerWidth < 768) {
-      // Mobile view
-      menu.style.display = "none";
-      openMenuButton.style.display = "block";
+    if (document.documentElement.classList.contains("light-mode")) {
+      localStorage.setItem("theme", "light");
+      modeToggle.innerText = "🌕";
     } else {
-      // Desktop view
-      menu.style.display = "flex";
-      openMenuButton.style.display = "none";
+      modeToggle.innerText = "☀️";
+      localStorage.removeItem("theme");
     }
-  }
-
-  // Initial setup
-  updateMenuDisplay();
-
-  window.addEventListener("resize", updateMenuDisplay);
-
-  if (openMenuButton) {
-    openMenuButton.onclick = function () {
-      menu.style.display = "flex";
-      openMenuButton.style.display = "none";
-    };
-  }
-
-  if (closeMenuButton) {
-    closeMenuButton.onclick = function () {
-      menu.style.display = "none";
-      openMenuButton.style.display = "block";
-    };
-  }
-
+    // Save the user's preference in a cookie or local storage if needed
+  });
 });
