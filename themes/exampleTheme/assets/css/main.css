@@ -14,6 +14,8 @@
   --decoration-border-color: white;
   --image-border-color: white;
   --navbar-height: 55px; /* We can use this to define padding for many elements. */
+  --menu-button-width: 32px;
+  --menu-button-height: 4px;
 }
 
 :root.light-mode {
@@ -143,8 +145,8 @@ header img {
 }
 
 #overlay-button span {
-  height: 4px;
-  width: 32px;
+  height: var(--menu-button-height);
+  width: var(--menu-button-width);
   border-radius: 2px;
   background-color: var(--navbar-button-color);
   position: relative;
@@ -154,8 +156,8 @@ header img {
 
 #overlay-button span:before,
 #overlay-button span:after {
-  height: 4px;
-  width: 32px;
+  height: var(--menu-button-height);
+  width: var(--menu-button-width);
   border-radius: 2px;
   background-color: var(--navbar-button-color);
   position: absolute;
@@ -481,13 +483,18 @@ blockquote {
   padding-bottom: 0.5em;
 }
 
+.error {
+  margin: auto;
+}
+
+.error h1 {
+  font-weight: 900;
+  font-size: 3em;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 768px) {
-  .open-menu-button,
-  .close-menu-button {
-    display: none;
-  }
-
+  /* Large Screens  */
   #overlay-button {
     display: none;
   }
@@ -511,6 +518,7 @@ blockquote {
 }
 
 @media only screen and (max-width: 767px) {
+  /* Small Screeens  */
   .navbar,
   .main-content,
   .posts-section,
@@ -556,9 +564,14 @@ blockquote {
   .timeline-area div {
     width: 95%;
   }
+
+  .error h1 {
+    font-size: 2em;
+  }
 }
 
 @media only screen and (max-height: 500px) and (orientation: landscape) {
+  /* Portrait Screens  */
   .main-content {
     padding-top: 15vh;
   }
