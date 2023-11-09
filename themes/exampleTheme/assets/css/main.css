@@ -144,7 +144,7 @@ header img {
 
 #overlay-button span {
   height: 4px;
-  width: 35px;
+  width: 32px;
   border-radius: 2px;
   background-color: var(--navbar-button-color);
   position: relative;
@@ -155,7 +155,7 @@ header img {
 #overlay-button span:before,
 #overlay-button span:after {
   height: 4px;
-  width: 35px;
+  width: 32px;
   border-radius: 2px;
   background-color: var(--navbar-button-color);
   position: absolute;
