@@ -98,12 +98,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--navbar);
-  color: var(--background-color);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  background-color: var(--navbar);
+  color: var(--background-color);
   height: var(--navbar-height);
   z-index: 999;
 }
@@ -116,8 +116,9 @@ header {
 }
 
 header .navbar a {
+  /* color for navbar links is defined below in overlay section  */
   text-decoration: none;
-  color: white;
+  color: var(--navbar-button-color);
   font-size: 18px;
 }
 
@@ -128,7 +129,11 @@ header .navbar a {
   font-size: 18px;
   cursor: pointer;
 }
-header img {
+
+.logo {
+  font-size: 30px;
+}
+header .logo {
   font-size: 24px;
   width: 35px;
   height: auto;
