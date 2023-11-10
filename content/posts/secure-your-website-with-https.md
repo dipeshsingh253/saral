@@ -45,3 +45,8 @@ Once you've obtained and installed the SSL/TLS certificate, you need to configur
 ## Conclusion
 
 Implementing HTTPS is essential for ensuring the security and privacy of your website's users. By encrypting data, ensuring data integrity, and providing authentication, HTTPS builds trust and safeguards sensitive information. It's a ranking factor for search engines and a must-have in today's security-conscious web environment. Secure your website with HTTPS to protect your users and enhance your online presence.
+
+
+{{< note >}}
+This feature will be only applicable for jackson-databind version 2.3 or above.
+{{< /note >}}
