@@ -11,6 +11,8 @@
   --links: rebeccapurple;
   --navbar: var(--primary-color);
   --navbar-button-color: white;
+  --highlight-border-color: #ffc107;
+  --highlight-text-color: #b07373;
   --decoration-border-color: white;
   --image-border-color: white;
   --navbar-height: 55px; /* We can use this to define padding for many elements. */
@@ -488,6 +490,12 @@ blockquote {
   padding-bottom: 0.5em;
 }
 
+.note {
+  color: var(--highlight-text-color);
+  padding: 10px;
+  margin-bottom: 15px;
+  border-left: 1px solid var(--highlight-border-color);
+}
 .error {
   margin: auto;
 }
