@@ -1,9 +1,7 @@
 baseURL = 'https://quickstart-hugo.pages.dev/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'exampleTheme'
+title = 'Saral : A simple hugo theme'
+theme = 'saral'
 
 pygmentsCodefences = true
 pygmentsStyle = "github-dark"
-
-guide = "https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma"
