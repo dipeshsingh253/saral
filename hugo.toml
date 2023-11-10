@@ -1,7 +1,47 @@
-baseURL = 'https://quickstart-hugo.pages.dev/'
+baseURL = 'http://192.168.29.7:1313'
 languageCode = 'en-us'
 title = 'Saral : A simple hugo theme'
-theme = 'saral'
+author = "dipeshsingh253"
 
-pygmentsCodefences = true
-pygmentsStyle = "github-dark"
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "Posts"
+    pre = "pen-tool"
+    url = "/posts/"
+    weight = 20
+  [[menu.main]]
+    name = "Project"
+    pre = "project"
+    url = "/project/"
+    weight = 30
+  [[menu.main]]
+    name = "About"
+    pre = "about"
+    url = "/about/"
+    weight = 40
+  [[menu.main]]
+    name = "Contact"
+    pre = "contact"
+    url = "/contact/"
+    weight = 60
+  [[menu.main]]
+    name = "Resume"
+    pre = "resume"
+    url = "/resume/"
+    weight = 80
+  [[menu.main]]
+    name = "Tags"
+    pre = "tags"
+    url = "/tags/"
+    weight = 70
+  [[menu.main]]
+   name = "Journey"
+   pre = "journey"
+   url = "/journey/"
+   weight = 50
+  
