@@ -1,3 +1,10 @@
+It will be launched in Jan 2024. Some changes are required to make it more simple and user-friendly.
+
+ - Change the default font to Plus Jakarta Sans.
+ - Take some motivation from Hashnode.
+ - Select a color scheme for the default look.
+
+
 # Saral Hugo Theme
 
 Saral, meaning "simple" in Hindi (सरल), is a minimalist and elegant Hugo theme designed for those who appreciate clean and straightforward aesthetics. Embrace simplicity without compromising style.
