@@ -5,6 +5,8 @@ layout = 'about'
 hideDate = true
 +++
 
+# About Me 👋
+
 Hello, world! 🌎 I'm [Dipesh Singh](https://github.com/dipeshsingh253/), a passionate coding enthusiast and lifelong learner.
 
 {{< github-profile-card >}}

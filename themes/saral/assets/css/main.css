@@ -57,6 +57,8 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
+  padding-top: 1em;
+  padding-bottom: 0.5em;
 }
 
 time {
@@ -119,6 +121,13 @@ header {
   width: 80%;
 }
 
+.active_menu {
+  border-bottom: 2px solid white;
+}
+
+.active_tag {
+  background-color: var(--navbar);
+}
 header .navbar a {
   /* color for navbar links is defined below in overlay section  */
   text-decoration: none;
@@ -336,7 +345,6 @@ main .tags:first-child > h1 {
   width: 60%;
   margin: 1em auto;
   padding: 1em;
-  line-height: 1.5em;
   border: 1px solid grey;
   border-radius: 5px;
 }
@@ -356,12 +364,6 @@ main .tags:first-child > h1 {
   width: 60%;
 }
 
-.post,
-.project,
-.about {
-  line-height: 1.5em;
-}
-
 .post p {
   color: var(--text-color);
 }
@@ -374,7 +376,7 @@ main .tags:first-child > h1 {
 }
 
 .meta-heading {
-  border-bottom: 1px solid var(--decoration-border-color);
+  border-bottom: 0.5px solid var(--decoration-border-color);
 }
 
 .meta-heading h1 {
@@ -465,21 +467,9 @@ blockquote {
   gap: 10px;
 }
 
-.project-details {
-  line-height: 2em;
-}
-
-.about {
-  line-height: 2em;
-}
-
 .about h2 {
   padding-top: 1em;
   padding-bottom: 0.5em;
-}
-
-.default {
-  line-height: 2em;
 }
 
 .default h1,
