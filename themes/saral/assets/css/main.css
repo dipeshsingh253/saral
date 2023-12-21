@@ -1,5 +1,5 @@
 /* Import Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Ubuntu+Mono:wght@400;700&display=swap");
 
 /* Variables */
 :root {
@@ -9,13 +9,13 @@
   --text-color: rgb(126, 124, 124);
   --accent-color: rgb(126, 124, 124);
   --links: rebeccapurple;
-  --navbar: var(--primary-color);
+  --navbar: #1d63ed;
   --navbar-button-color: white;
   --decoration-border-color: white;
   --highlight-border-color: #ffc107;
   --highlight-text-color: #b07373;
   --image-border-color: white;
-  --navbar-height: 55px; /* We can use this to define padding for many elements. */
+  --navbar-height: 70px; /* We can use this to define padding for many elements. */
   --menu-button-width: 32px;
   --menu-button-height: 4px;
 }
@@ -27,18 +27,18 @@
   --text-color: rgb(126, 124, 124);
   --accent-color: rgb(126, 124, 124);
   --links: rebeccapurple;
-  --navbar: var(--primary-color);
+  --navbar: #1d63ed;
   --navbar-button-color: black;
   --decoration-border-color: black;
   --image-border-color: black;
-  --navbar-height: 55px; /* We can use this to define padding for many elements. */
+  --navbar-height: 70px; /* We can use this to define padding for many elements. */
 }
 
 /* Global Styles */
 * {
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu Mono", monospace;
+  font-family: "Plus Jakarta Sans", monospace;
 }
 
 p,
@@ -300,7 +300,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 
 .tags > h1,
 .posts-section > h1 {
-  width: 80%;
+  width: 60%;
 }
 
 main .posts-section:first-child > h1,
@@ -316,7 +316,7 @@ main .tags:first-child > h1 {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: start;
-  width: 80%;
+  width: 60%;
   gap: 1em;
 }
 
@@ -329,19 +329,18 @@ main .tags:first-child > h1 {
 .tags div span a,
 .posts-section a {
   color: var(--heading-color);
-}
-
-.tags div span a {
   text-decoration: none;
 }
 
 .post-element {
   text-decoration: none;
   display: block;
-  width: 80%;
-  margin: auto;
-  padding-top: 2em;
+  width: 60%;
+  margin: 1em auto;
+  padding: 1em;
   line-height: 1.5em;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 .posts-section p {
@@ -356,7 +355,7 @@ main .tags:first-child > h1 {
   margin: auto;
   padding: 20px;
   padding-top: var(--navbar-height);
-  width: 80%;
+  width: 60%;
 }
 
 .post,
