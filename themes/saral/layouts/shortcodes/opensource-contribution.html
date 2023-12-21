@@ -4,7 +4,6 @@ $projects }} {{ $username := .username }} {{ $reponame := .reponame }} {{ $owner
 
 <div class="opensource-contribution">
   <div class="project-heading">
-    <h3>{{ .title }}</h3>
     {{ with $reponame }} {{ $repoCardURL := printf
     "https://github-readme-stats.vercel.app/api/pin/?username=%s&repo=%s&theme=dark"
     $owner . }} {{ with $repoCardURL }}
@@ -13,13 +12,16 @@ $projects }} {{ $username := .username }} {{ $reponame := .reponame }} {{ $owner
   </div>
   <div class="project-details">
     <!-- Display other fields like description, username, reponame, etc. -->
-    <p>{{ .description }}</p>
+    <div>
+      <p>{{ .description }}</p>
+    </div>
+
     <div class="project-links">
       {{ $githubURL := printf "https://github.com/%s/%s" $username $reponame }}
       {{ with $githubURL }}
       <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Github</a>
-      {{ end }} {{ with .livedemo }}
-      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Demo</a>
+      {{ end }} {{ with .website }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Website</a>
       {{ end }}
     </div>
 

@@ -3,7 +3,7 @@
   owner: springwolf
   username: dipeshsingh253
   reponame: springwolf-core
-  livedemo: https://github.com/dipeshsingh253/springwolf-core
+  website: https://github.com/dipeshsingh253/springwolf-core
   issues:
     - title: Springwolf Kafka Controller Objectmapper Creation
       url: https://github.com/springwolf/springwolf-core/issues/357
@@ -17,7 +17,7 @@
   owner: quarkus-qe
   username: dipeshsingh253
   reponame: quarkus-test-suite
-  livedemo: https://github.com/dipeshsingh253/qurkus-test-suite
+  website: https://github.com/dipeshsingh253/qurkus-test-suite
   issues:
     - title: Leaking Vertx and HttpClient
       url: https://github.com/quarkus-qe/quarkus-test-suite/issues/1408

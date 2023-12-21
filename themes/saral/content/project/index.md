@@ -12,4 +12,4 @@ hideDate: true
 
 ## Personal Projects
 
-{{< project-card >}}
+{{< projects >}}
