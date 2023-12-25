@@ -57,7 +57,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  padding-top: 1em;
+
   padding-bottom: 0.5em;
 }
 
@@ -284,7 +284,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   width: 120px;
   height: auto;
   border-radius: 50%;
-  border: 5px solid var(--image-border-color);
+  /* border: px solid var(--image-border-color); */
 }
 
 .hero div .socials {
@@ -341,9 +341,9 @@ main .tags:first-child > h1 {
 
 .post-element {
   text-decoration: none;
-  display: block;
-  width: 60%;
-  margin: 1em auto;
+  display: flex;
+  margin: 1.5em auto;
+  max-width: 72ch;
   padding: 1em;
   border: 1px solid grey;
   border-radius: 5px;
@@ -354,6 +354,10 @@ main .tags:first-child > h1 {
 }
 
 /* Post Content Styles */
+
+.main-content h1 {
+  padding-top: 1em;
+}
 .main-content {
   display: flex;
   flex-direction: column;
@@ -445,6 +449,7 @@ blockquote {
 /* Project Section style */
 
 .project-card,
+.profile-card,
 .opensource-contribution {
   display: flex;
   margin: 30px 0;
@@ -460,11 +465,16 @@ blockquote {
   text-decoration: underline;
 }
 
-.project-heading {
+.project-heading,
+.profiel-heading {
   display: flex;
   flex-direction: column;
   align-items: self-start;
   gap: 10px;
+}
+
+.profile-card {
+  border: none;
 }
 
 .about h2 {
@@ -472,6 +482,10 @@ blockquote {
   padding-bottom: 0.5em;
 }
 
+.about h3 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
 .default h1,
 .default h2,
 .default h3,
@@ -531,6 +545,9 @@ blockquote {
     width: 90%;
   }
 
+  .post-element {
+    padding: 1em 0.5em;
+  }
   .project-card,
   .opensource-contribution {
     margin: 0;
@@ -539,7 +556,8 @@ blockquote {
   }
 
   .project-card img,
-  .opensource-contribution img {
+  .opensource-contribution img,
+  .profile-card img {
     width: 100%;
   }
 
@@ -549,11 +567,6 @@ blockquote {
 
   .tags > h1 {
     width: 90%;
-  }
-
-  .posts-section > h1,
-  .posts-section div span {
-    width: 100%;
   }
 
   .hero div .socials {
