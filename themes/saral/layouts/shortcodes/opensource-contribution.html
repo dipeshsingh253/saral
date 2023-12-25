@@ -5,7 +5,7 @@ $projects }} {{ $username := .username }} {{ $reponame := .reponame }} {{ $owner
 <div class="opensource-contribution">
   <div class="project-heading">
     {{ with $reponame }} {{ $repoCardURL := printf
-    "https://github-readme-stats.vercel.app/api/pin/?username=%s&repo=%s&theme=dark"
+    "https://github-readme-stats.vercel.app/api/pin/?username=%s&repo=%s&theme=dark&hide_border=true"
     $owner . }} {{ with $repoCardURL }}
     <img src="{{ $repoCardURL }}" alt="" />
     {{ end }} {{ end }}

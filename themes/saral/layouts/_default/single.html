@@ -3,7 +3,7 @@
 <main class="main-content">
   {{ if eq .Layout "post" }} {{ partial "common/meta-heading.html" . }}
   <section class="post">
-    {{ .Content }} {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    {{ .Content }} 
   </section>
   {{ else if eq .Layout "about" }}
   <section class="about">{{ .Content }}</section>

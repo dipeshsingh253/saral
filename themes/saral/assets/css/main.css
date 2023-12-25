@@ -3,35 +3,28 @@
 
 /* Variables */
 :root {
-  --background-color: black;
+  /* 2f5c8f */
+  /* used as background-color of elements , used as common color for elements, used as to highlight some part of code*/
   --primary-color: black;
-  --heading-color: white;
-  --text-color: rgb(126, 124, 124);
-  --accent-color: rgb(126, 124, 124);
-  --links: rebeccapurple;
-  --navbar: #1d63ed;
-  --navbar-button-color: white;
-  --decoration-border-color: white;
-  --highlight-border-color: #ffc107;
-  --highlight-text-color: #b07373;
-  --image-border-color: white;
+  --secondary-color: white;
+  --accent-color: #ffbd7a;
+  --note-color: rgb(250, 115, 115);
+  --heading-color: #c6c6ff;
+  --container-border-color: white;
+  --text-color: white;
   --navbar-height: 70px; /* We can use this to define padding for many elements. */
   --menu-button-width: 32px;
   --menu-button-height: 4px;
 }
 
 :root.light-mode {
-  --background-color: white;
   --primary-color: white;
-  --heading-color: black;
-  --text-color: rgb(126, 124, 124);
-  --accent-color: rgb(126, 124, 124);
-  --links: rebeccapurple;
-  --navbar: #1d63ed;
-  --navbar-button-color: black;
-  --decoration-border-color: black;
-  --image-border-color: black;
-  --navbar-height: 70px; /* We can use this to define padding for many elements. */
+  --secondary-color: black;
+  --accent-color: #ff6969;
+  --note-color: rgb(250, 115, 115);
+  --heading-color: #252b48;
+  --container-border-color: black;
+  --text-color: #010b13; /* We can use this to define padding for many elements. */
 }
 
 /* Global Styles */
@@ -57,7 +50,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  padding-top: 1em;
+
   padding-bottom: 0.5em;
 }
 
@@ -72,13 +65,13 @@ html {
 }
 
 a {
-  color: var(--links);
+  color: var(--accent-color);
   text-decoration: underline;
 }
 
 body {
   scroll-behavior: smooth;
-  background-color: var(--background-color);
+  background-color: var(--primary-color);
   color: var(--text-color);
   min-height: 100vh;
   display: flex;
@@ -108,8 +101,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--navbar);
-  color: var(--background-color);
+  background-color: var(--primary-color);
   height: var(--navbar-height);
   z-index: 999;
 }
@@ -122,23 +114,33 @@ header {
 }
 
 .active_menu {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 3px;
+}
+
+.navbar ul li .active_menu {
+  color: var(--heading-color);
 }
 
 .active_tag {
-  background-color: var(--navbar);
+  background-color: var(--secondary-color);
 }
+
+.active_tag a:first-child {
+  color: var(--primary-color);
+}
+
 header .navbar a {
   /* color for navbar links is defined below in overlay section  */
   text-decoration: none;
-  color: var(--navbar-button-color);
+  color: var(--secondary-color);
   font-size: 18px;
 }
 
 .navbar button {
-  background-color: var(--navbar);
+  background-color: var(--primary-color);
   border: none;
-  color: var(--navbar-button-color);
+  color: var(--secondary-color);
   font-size: 18px;
   cursor: pointer;
 }
@@ -151,6 +153,7 @@ header .logo {
   width: 35px;
   height: auto;
   border-radius: 50%;
+  color: var(--heading-color);
 }
 
 #overlay-button {
@@ -166,7 +169,7 @@ header .logo {
   height: var(--menu-button-height);
   width: var(--menu-button-width);
   border-radius: 2px;
-  background-color: var(--navbar-button-color);
+  background-color: var(--secondary-color);
   position: relative;
   display: block;
   transition: all 0.2s ease-in-out;
@@ -177,7 +180,7 @@ header .logo {
   height: var(--menu-button-height);
   width: var(--menu-button-width);
   border-radius: 2px;
-  background-color: var(--navbar-button-color);
+  background-color: var(--secondary-color);
   position: absolute;
   content: "";
   transition: all 0.2s ease-in-out;
@@ -195,7 +198,7 @@ header .logo {
 #overlay-button:hover span,
 #overlay-button:hover span:before,
 #overlay-button:hover span:after {
-  background: var(--navbar-button-color);
+  background: var(--secondary-color);
 }
 
 input[type="checkbox"] {
@@ -235,7 +238,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 }
 
 #overlay ul {
-  background-color: var(--navbar);
+  background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,7 +254,12 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 }
 
 #overlay ul li a {
-  color: var(--navbar-button-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+#overlay ul li .active_menu {
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -284,7 +292,6 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   width: 120px;
   height: auto;
   border-radius: 50%;
-  border: 5px solid var(--image-border-color);
 }
 
 .hero div .socials {
@@ -295,7 +302,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 
 .hero div .socials a {
   text-decoration: none;
-  color: var(--links);
+  color: var(--accent-color);
 }
 
 /* Tags and Posts Section */
@@ -309,15 +316,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   padding-bottom: 35px;
 }
 
-main .posts-section:first-child > h1,
-main .tags:first-child > h1 {
-  font-weight: 900;
-  font-size: 3em;
-  border-bottom: 1px solid var(--decoration-border-color);
-}
-
 .tags div {
-  padding: 1em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -327,7 +326,7 @@ main .tags:first-child > h1 {
 }
 
 .tags div span {
-  border: 1px solid var(--decoration-border-color);
+  border: 1px solid var(--container-border-color);
   border-radius: 8px;
   padding: 4px 8px;
   font-size: large;
@@ -341,11 +340,11 @@ main .tags:first-child > h1 {
 
 .post-element {
   text-decoration: none;
-  display: block;
-  width: 60%;
-  margin: 1em auto;
+  display: flex;
+  margin: 1.5em auto;
+  max-width: 72ch;
   padding: 1em;
-  border: 1px solid grey;
+  border: 1px solid var(--container-border-color);
   border-radius: 5px;
 }
 
@@ -354,6 +353,10 @@ main .tags:first-child > h1 {
 }
 
 /* Post Content Styles */
+
+.main-content h1 {
+  padding-top: 1em;
+}
 .main-content {
   display: flex;
   flex-direction: column;
@@ -372,16 +375,18 @@ main .tags:first-child > h1 {
   display: block;
   margin: auto;
   width: 100%;
-  border-radius: 30px;
+  border-radius: 1em;
 }
 
 .meta-heading {
-  border-bottom: 0.5px solid var(--decoration-border-color);
+  border-bottom: 0.5px solid var(--container-border-color);
+  padding-bottom: 0.5em;
 }
 
 .meta-heading h1 {
   font-weight: 900;
   font-size: 3em;
+  padding: 0;
 }
 
 figcaption {
@@ -395,13 +400,14 @@ figcaption {
 .post-tags {
   display: flex;
   flex-direction: column;
+  margin: 1em 0;
   gap: 1em;
 }
 
 .post-tags span a {
-  color: var(--accent-color);
+  color: var(--secondary-color);
   text-decoration: none;
-  border: 1px solid var(--decoration-border-color);
+  border: 1px solid var(--container-border-color);
   padding: 5px 10px;
   border-radius: 8px;
 }
@@ -439,17 +445,18 @@ blockquote {
   margin-bottom: 10px;
   margin-left: 50px;
   padding-left: 15px;
-  border-left: 3px solid #ccc;
+  border-left: 3px solid var(--secondary-color);
 }
 
 /* Project Section style */
 
 .project-card,
+.profile-card,
 .opensource-contribution {
   display: flex;
   margin: 30px 0;
   flex-direction: column;
-  border: 1px solid grey;
+  border: 1px solid var(--container-border-color);
   border-radius: 10px;
   padding: 1em;
 }
@@ -460,11 +467,16 @@ blockquote {
   text-decoration: underline;
 }
 
-.project-heading {
+.project-heading,
+.profiel-heading {
   display: flex;
   flex-direction: column;
   align-items: self-start;
   gap: 10px;
+}
+
+.profile-card {
+  border: none;
 }
 
 .about h2 {
@@ -472,6 +484,10 @@ blockquote {
   padding-bottom: 0.5em;
 }
 
+.about h3 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
 .default h1,
 .default h2,
 .default h3,
@@ -492,10 +508,10 @@ blockquote {
 }
 
 .note {
-  color: var(--highlight-text-color);
+  color: var(--note-color);
   padding: 10px;
   margin-bottom: 15px;
-  border-left: 1px solid var(--highlight-border-color);
+  border-left: 1px solid var(--accent-color);
 }
 /* Media Queries */
 @media only screen and (min-width: 768px) {
@@ -531,6 +547,9 @@ blockquote {
     width: 90%;
   }
 
+  .post-element {
+    padding: 1em 0.5em;
+  }
   .project-card,
   .opensource-contribution {
     margin: 0;
@@ -539,7 +558,8 @@ blockquote {
   }
 
   .project-card img,
-  .opensource-contribution img {
+  .opensource-contribution img,
+  .profile-card img {
     width: 100%;
   }
 
@@ -549,11 +569,6 @@ blockquote {
 
   .tags > h1 {
     width: 90%;
-  }
-
-  .posts-section > h1,
-  .posts-section div span {
-    width: 100%;
   }
 
   .hero div .socials {
@@ -595,6 +610,7 @@ pre,
 code,
 .highlight {
   background-color: #0d1117;
+  color: white;
 }
 
 pre {
@@ -627,14 +643,14 @@ code {
 
 .timeline-area {
   margin: 2em;
-  border-left: 2px solid var(--decoration-border-color);
+  border-left: 2px solid var(--container-border-color);
   padding: 0 20px 0 30px;
 }
 
 .timeline-area div {
   border-radius: 5px;
   padding: 10px 25px;
-  border: 1px solid var(--decoration-border-color);
+  border: 1px solid var(--container-border-color);
   position: relative;
   height: auto;
   min-height: 110px;
@@ -647,13 +663,16 @@ code {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--background-color);
-  border: 3px solid var(--decoration-border-color);
+  background-color: var(--container-border-color);
+  border: 3px solid var(--container-border-color);
   position: absolute;
   top: 10px;
   left: -40px;
 }
 
+.timeline-area strong {
+  color: var(--accent-color);
+}
 .timeline-area p {
   margin-bottom: 0;
 }
