@@ -1,9 +1,8 @@
 <section class="tags">
-  <h1>{{ .Title }}</h1>
   <div>
     {{ .Content }} {{ range .Pages }}
     <span>
-      <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
       <!-- <p>{{ .Summary }}</p> -->
     </span>
     {{end }}

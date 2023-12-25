@@ -2,6 +2,21 @@
 <script src="{{ .RelPermalink }}"></script>
 {{- end }}
 <script>
+  var prevScrollPos = window.pageYOffset;
+
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    var header = document.getElementsByTagName("header")[0];
+
+    if (prevScrollPos > currentScrollPos) {
+      header.style.display = "flex";
+    } else {
+      header.style.display = "none";
+    }
+    prevScrollPos = currentScrollPos;
+  };
+</script>
+<script>
   // This piece of code was shamelessly copied from : https://github.com/adityatelange/hugo-PaperMod/blob/master/layouts/partials/footer.html
   document.querySelectorAll("pre > code").forEach((codeblock) => {
     const container = codeblock.parentNode.parentNode;

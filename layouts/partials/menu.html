@@ -13,8 +13,8 @@ Renders a menu for the given menu ID.
 {{- with index site.Menus $menuID }}
 <nav class="navbar">
   <a href="/">
-    <img class="logo" src="/images/avatar.jpeg" alt="Avatar">
-    <!-- <p class="logo">JD</p> -->
+    <!-- <img class="logo" src="/images/avatar.jpeg" alt="Avatar"> -->
+    <p class="logo">john.dev</p>
   </a>
 <input type="checkbox" id="overlay-input" />
 <label for="overlay-input" id="overlay-button"><span></span></label>
@@ -29,15 +29,14 @@ Renders a menu for the given menu ID.
 
 {{- define "partials/inline/menu/walk.html" }}
   {{- $page := .page }}
+  {{- $page_url:= $page.Permalink | absLangURL }}
   {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL }}
-    {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-    {{- else if $page.HasMenuCurrent .Menu .}}
-      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
-    {{- end }}
+  {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+  {{- $attrs := dict "href" .URL }}
+
     <li>
       <a
+      {{- if eq $menu_item_url $page_url }} class="active_menu" {{- end }}
         {{- range $k, $v := $attrs }}
           {{- with $v }}
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}

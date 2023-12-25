@@ -1,13 +1,14 @@
 {{ define "main" }}
 
 <main class="main-content">
-  {{ partial "common/meta-heading.html" . }} {{ if eq .Layout "post" }}
+  {{ if eq .Layout "post" }} {{ partial "common/meta-heading.html" . }}
   <section class="post">
-    {{ .Content }} {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    {{ .Content }} 
   </section>
   {{ else if eq .Layout "about" }}
   <section class="about">{{ .Content }}</section>
-  {{ else if eq .Layout "project" }} {{ partial "common/toc.html" . }}
+  {{ else if eq .Layout "project" }} {{ partial "common/toc.html" (dict "title"
+  "On This Page" "page" .) }}
   <section class="project">{{ .Content }}</section>
   {{ else if eq .Layout "journey" }}
   <section class="journey">{{ .Content }}</section>
