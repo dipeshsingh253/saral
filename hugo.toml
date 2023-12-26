@@ -1,4 +1,4 @@
-baseURL = 'https://quickstart-hugo.pages.dev/'
+baseURL = 'https://saral-hugo-theme.pages.dev/'
 languageCode = 'en-us'
 title = 'Saral : A simple hugo theme'
 theme = 'saral'

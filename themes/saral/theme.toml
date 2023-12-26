@@ -7,7 +7,7 @@ description = 'Embrace simplicity without compromising style.'
 homepage = 'https://github.com/dipeshsingh253/saral-hugo-theme'
 
 # If you have a running demo of the theme
-demosite = 'https://owner.github.io/repo'
+demosite = 'https://saral-hugo-theme.pages.dev'
 
 # If the theme has a single author
 [author]
