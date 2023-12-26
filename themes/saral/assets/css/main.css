@@ -6,25 +6,29 @@
   /* 2f5c8f */
   /* used as background-color of elements , used as common color for elements, used as to highlight some part of code*/
   --primary-color: black;
-  --secondary-color: white;
+  --secondary-color: #c2ccdf;
   --accent-color: #ffbd7a;
   --note-color: rgb(250, 115, 115);
-  --heading-color: #c6c6ff;
-  --container-border-color: white;
-  --text-color: white;
+  --heading-color: #c2ccdf;
+  --container-border-color: #727382;
+  --text-color: #727382;
   --navbar-height: 70px; /* We can use this to define padding for many elements. */
   --menu-button-width: 32px;
   --menu-button-height: 4px;
+  --shadow-one: rgba(255, 255, 255, 0.02); /* Adjusted for dark mode */
+  --shadow-two: rgba(255, 255, 255, 0.15);
 }
 
 :root.light-mode {
   --primary-color: white;
-  --secondary-color: black;
+  --secondary-color: #454963;
   --accent-color: #ff6969;
   --note-color: rgb(250, 115, 115);
-  --heading-color: #252b48;
-  --container-border-color: black;
-  --text-color: #010b13; /* We can use this to define padding for many elements. */
+  --heading-color: #233044;
+  --container-border-color: #454963;
+  --shadow-one: rgba(0, 0, 0, 0.02);
+  --shadow-two: rgba(27, 31, 35, 0.15);
+  --text-color: #454963; /* We can use this to define padding for many elements. */
 }
 
 /* Global Styles */
@@ -50,8 +54,6 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-
-  padding-bottom: 0.5em;
 }
 
 time {
@@ -153,7 +155,7 @@ header .logo {
   width: 35px;
   height: auto;
   border-radius: 50%;
-  color: var(--heading-color);
+  color: var(--secondary-color);
 }
 
 #overlay-button {
@@ -326,8 +328,9 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 }
 
 .tags div span {
-  border: 1px solid var(--container-border-color);
   border-radius: 8px;
+  box-shadow: var(--container-border-color) 0px 1px 3px 0px,
+    var(--primary-color) 0px 0px 0px 1px;
   padding: 4px 8px;
   font-size: large;
 }
@@ -344,7 +347,8 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   margin: 1.5em auto;
   max-width: 72ch;
   padding: 1em;
-  border: 1px solid var(--container-border-color);
+  box-shadow: var(--shadow-one) 0px 1px 3px 0px,
+    var(--shadow-two) 0px 0px 0px 1px;
   border-radius: 5px;
 }
 
@@ -356,6 +360,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 
 .main-content h1 {
   padding-top: 1em;
+  padding-bottom: 0.5em;
 }
 .main-content {
   display: flex;
@@ -380,15 +385,21 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 
 .meta-heading {
   border-bottom: 0.5px solid var(--container-border-color);
-  padding-bottom: 0.5em;
+  text-align: center;
 }
 
 .meta-heading h1 {
   font-weight: 900;
-  font-size: 3em;
+  font-size: 4em;
   padding: 0;
 }
-
+.meta-heading > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 1em;
+  padding: 1em;
+}
 figcaption {
   text-align: center;
   font-size: smaller;
@@ -400,14 +411,14 @@ figcaption {
 .post-tags {
   display: flex;
   flex-direction: column;
-  margin: 1em 0;
-  gap: 1em;
+  flex-wrap: wrap;
 }
 
 .post-tags span a {
   color: var(--secondary-color);
   text-decoration: none;
-  border: 1px solid var(--container-border-color);
+  box-shadow: var(--container-border-color) 0px 1px 3px 0px,
+    var(--primary-color) 0px 0px 0px 1px;
   padding: 5px 10px;
   border-radius: 8px;
 }
@@ -456,7 +467,8 @@ blockquote {
   display: flex;
   margin: 30px 0;
   flex-direction: column;
-  border: 1px solid var(--container-border-color);
+  box-shadow: var(--shadow-one) 0px 1px 3px 0px,
+    var(--shadow-two) 0px 0px 0px 1px;
   border-radius: 10px;
   padding: 1em;
 }
@@ -477,6 +489,7 @@ blockquote {
 
 .profile-card {
   border: none;
+  box-shadow: none;
 }
 
 .about h2 {
@@ -588,6 +601,21 @@ blockquote {
   .error h1 {
     font-size: 2em;
   }
+
+  .meta-heading h1 {
+    font-size: 3em;
+  }
+
+  .meta-heading > span {
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+  }
+
+  .meta-heading > span > time,
+  .post-tags {
+    margin: 1em 0;
+  }
 }
 
 @media only screen and (max-height: 500px) and (orientation: landscape) {
@@ -663,7 +691,7 @@ code {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--container-border-color);
+  background-color: var(--primary-color);
   border: 3px solid var(--container-border-color);
   position: absolute;
   top: 10px;
