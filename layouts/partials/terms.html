@@ -4,8 +4,8 @@
 $page := .page }} {{- $taxonomy := .taxonomy }} {{- with $page.GetTerms
 $taxonomy }} {{- $label := (index . 0).Parent.LinkTitle }}
 <div class="post-tags">
-  <div>{{ $label }}:</div>
   <div>
+    <!-- <span>{{ $label }}:</span> -->
     {{- range . }}
     <span>
       <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
