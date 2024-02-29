@@ -6,10 +6,10 @@ layout: project
 hideDate: true
 ---
 
-## Open Source Contributions
+## 🤝 Open Source Contributions
 
 {{< opensource-contribution >}}
 
-## Personal Projects
+## 💡 Personal Projects
 
 {{< projects >}}

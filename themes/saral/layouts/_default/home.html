@@ -14,14 +14,29 @@
         {{ end }}
       </div>
     </div>
-  </section>
-  <section class="posts-section">
-    <h2>Recent Posts</h2>
-    <div>
-      {{ range first 5 (where .Site.RegularPages "Section" "posts") }} {{
-      partial "post/listview.html" . }} {{ end }}
-    </div>
+    
   </section>
 </main>
-
+<div class="main-content">
+  <section class="about">
+    {{ with .Site.GetPage "section" "about" }}
+    {{ .Content }}
+  {{ end }}
+  </section>
+  <section class="journey">
+    {{ with .Site.GetPage "section" "journey" }}
+    {{ .Content }}
+  {{ end }}
+  </section>
+  <section class="project">
+    {{ with .Site.GetPage "section" "project" }}
+    {{ .Content }}
+  {{ end }}
+  </section>
+  <section class="default">
+    {{ with .Site.GetPage "section" "contact" }}
+    {{ .Content }}
+  {{ end }}
+  </section>
+ </div>
 {{ end }}

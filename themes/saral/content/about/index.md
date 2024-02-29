@@ -9,7 +9,7 @@ hideDate = true
 
 Hello, world! 🌎 I'm [Dipesh Singh](https://github.com/dipeshsingh253/), a passionate coding enthusiast and lifelong learner.
 
-{{< github-profile-card >}}
+<!-- {{< github-profile-card >}} -->
 
 📖 I craft interactive websites that tell compelling stories.
 🧩 I love diving into algorithms, solving digital puzzles, and creating elegant solutions.
