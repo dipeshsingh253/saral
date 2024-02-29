@@ -7,7 +7,7 @@
   /* used as background-color of elements , used as common color for elements, used as to highlight some part of code*/
   --primary-color: black;
   --secondary-color: #c2ccdf;
-  --accent-color: #ffbd7a;
+  --accent-color: #2e81f7;
   --note-color: rgb(250, 115, 115);
   --heading-color: #c2ccdf;
   --container-border-color: #727382;
@@ -486,7 +486,9 @@ blockquote {
   align-items: self-start;
   gap: 10px;
 }
-
+.tech-stack h4{
+  padding-bottom: 10px;
+}
 .profile-card {
   border: none;
   box-shadow: none;

@@ -14,8 +14,10 @@
       {{ $githubURL := printf "https://github.com/%s/%s" $username $reponame }}
       {{ with $githubURL }}
       <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Github</a>
+      <span> &nbsp; /  &nbsp; </span>
       {{ end }} {{ with .livedemo }}
       <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Demo</a>
+      <span> &nbsp; /  &nbsp; </span>
       {{ end }} {{ with .presentation }}
       <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
         >Presentation</a
