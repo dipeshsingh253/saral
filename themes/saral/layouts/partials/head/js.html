@@ -50,10 +50,15 @@
       } catch (e) {}
       selection.removeRange(range);
     });
+    console.log("==================================");
+console.log(container);
+console.log(codeblock);
+console.log("==================================");
 
-    if (container.classList.contains("highlight")) {
+if (container.classList.contains("highlight")) {
       // container.appendChild(copybutton);
-      codeblock.parentNode.appendChild(copybutton);
+      // codeblock.parentNode.appendChild(copybutton);
+      container.appendChild(copybutton);
     } else if (container.parentNode.firstChild == container) {
       // td containing LineNos
     } else if (
