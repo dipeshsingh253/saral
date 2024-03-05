@@ -493,7 +493,15 @@ blockquote {
   border: none;
   box-shadow: none;
 }
-
+.project-links{
+  margin: 5px 0px;
+}
+.project-links a{
+  border: 1px solid var(--container-border-color);
+  padding: 2px;
+  text-decoration: none;
+  border-radius: 5px;
+}
 .about h2 {
   padding-top: 1em;
   padding-bottom: 0.5em;
