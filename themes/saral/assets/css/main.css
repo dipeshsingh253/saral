@@ -92,6 +92,11 @@ main {
 
 footer {
   text-align: center;
+  padding: 1em;
+}
+
+footer p{
+  font-size: 15px;
 }
 
 /* Header Styles */
@@ -467,12 +472,16 @@ blockquote {
 
 /* Project Section style */
 
-.project-card,
+ .project-card,
 .profile-card,
 .opensource-contribution {
+
+
   display: flex;
   margin: 30px 0;
   flex-direction: column;
+  justify-content: center;
+  align-items: start;
   box-shadow: var(--shadow-one) 0px 1px 3px 0px,
     var(--shadow-two) 0px 0px 0px 1px;
   border-radius: 10px;
@@ -485,13 +494,14 @@ blockquote {
   text-decoration: underline;
   
 }
-
 .project-heading,
 .profiel-heading {
   display: flex;
   flex-direction: column;
   align-items: self-start;
-  gap: 10px;
+}
+.tech-stack img{
+  padding: 0 5px;
 }
 .tech-stack h4{
   padding-bottom: 10px;
@@ -499,7 +509,7 @@ blockquote {
 .profile-card {
   border: none;
   box-shadow: none;
-}
+} 
 .project-links{
   margin: 5px 0px;
 }
@@ -508,7 +518,16 @@ blockquote {
   padding: 2px;
   text-decoration: none;
   border-radius: 5px;
+} 
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
 }
+
 .about h2 {
   padding-top: 1em;
   padding-bottom: 0.5em;
@@ -527,7 +546,6 @@ blockquote {
   padding-top: 1em;
   padding-bottom: 0.5em;
 }
-
 .error {
   margin: auto;
 }
@@ -659,7 +677,7 @@ code,
 }
 
 pre {
-  border-radius: 3px;
+  border-radius: 0.5em;
   padding: 20px;
   position: relative;
   overflow-x: auto;
@@ -670,7 +688,7 @@ code {
 }
 
 .highlight {
-  border-radius: 5px;
+  border-radius: 0.5em;
   overflow-x: auto;
   position: relative;
 }

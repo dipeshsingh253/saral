@@ -7,7 +7,9 @@
     {{ end }}
   </div>
   <div class="project-details">
-    <p>{{ .description }}</p>
+    <div class="description">
+      <p>{{ .description }}</p>
+    </div>
     <div class="project-links">
       {{ $githubURL := printf "https://github.com/%s/%s" $username $reponame }}
       {{ with $githubURL }}
@@ -22,13 +24,14 @@
       >
       {{ end }}
     </div>
-    <h4>Features :</h4>
-    <ul>
-      {{ range .features }}
-      <li>{{ . }}</li>
-      {{ end }}
-    </ul>
-
+    <div class="features">
+      <h4>Features :</h4>
+      <ul>
+        {{ range .features }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
     <div class="tech-stack">
       <h4>Tech Stack :</h4>
       {{ range .stack }}
