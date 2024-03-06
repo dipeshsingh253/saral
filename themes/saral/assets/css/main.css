@@ -1,5 +1,5 @@
 /* Import Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Ubuntu+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans&family=Ubuntu+Mono:wght@400;700&display=swap");
 
 /* Variables */
 :root {
@@ -35,7 +35,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Plus Jakarta Sans", monospace;
+  /* font-family: "Plus Jakarta Sans", monospace; */
+  font-family: "Pacifico", cursive;
 }
 
 p,
@@ -148,9 +149,13 @@ header .navbar a {
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 24px;
+  font-style: italic;
+  border-bottom: 3px solid var(--accent-color);
+  line-height: normal;
+  font-family: "Pacifico", cursive;
 }
-header .logo {
+header img {
   font-size: 24px;
   width: 35px;
   height: auto;
