@@ -386,7 +386,9 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   width: 100%;
   border-radius: 1em;
 }
-
+.post .medium {
+  width: 60%;
+}
 .meta-heading {
   border-bottom: 0.5px solid var(--container-border-color);
   text-align: center;
