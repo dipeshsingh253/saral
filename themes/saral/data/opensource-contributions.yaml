@@ -1,28 +1,42 @@
-- title: Springwolf Core
-  description: Automated documentation for event-driven applications built with Spring Boot
+- title: Keycloak
+  description: Open Source Identity and Access Management For Modern Applications and Services 
   owner: springwolf
   username: dipeshsingh253
   reponame: springwolf-core
-  website: https://github.com/dipeshsingh253/springwolf-core
+  website: https://github.com/keycloak/keycloak
   issues:
-    - title: Springwolf Kafka Controller Objectmapper Creation
-      url: https://github.com/springwolf/springwolf-core/issues/357
-    - title: Another Issue
-      url: https://github.com/springwolf/springwolf-core/issues/358
+    - title: "Admin UI: Show realm display name on welcome page"
+      url: https://github.com/keycloak/keycloak/issues/25897
+    - title: Keycloak development server doesn't work on Windows
+      url: https://github.com/keycloak/keycloak/issues/26832
   pulls:
-    - title: Feature/rewrite example json generator
-      url: https://github.com/springwolf/springwolf-core/pull/394
+    - title: show displayName as default on welcome page
+      url: https://github.com/keycloak/keycloak/pull/26562
+    - title: modifying start-server.js to work on windows
+      url: https://github.com/keycloak/keycloak/pull/26892
+
 - title: Quarkus Test Suite
   description: Test Suite for Quarkus integration scenarios. Among the standard Quarkus test features, scenarios hardly rely on Quarkus-test-framework features
   owner: quarkus-qe
   username: dipeshsingh253
   reponame: quarkus-test-suite
-  website: https://github.com/dipeshsingh253/qurkus-test-suite
+  website: https://github.com/quarkus-qe/quarkus-test-suite
   issues:
     - title: Leaking Vertx and HttpClient
       url: https://github.com/quarkus-qe/quarkus-test-suite/issues/1408
-    - title: Another Issue
-      url: https://github.com/springwolf/springwolf-core/issues/358
   pulls:
     - title: "bug-fix : Closed Vert.x to Prevent Resource Leaks"
       url: https://github.com/quarkus-qe/quarkus-test-suite/pull/1474
+      
+- title: Springwolf Core
+  description: Automated documentation for event-driven applications built with Spring Boot
+  owner: springwolf
+  username: dipeshsingh253
+  reponame: springwolf-core
+  website: https://github.com/springwolf/springwolf-core
+  issues:
+    - title: Rewrite ExampleJsonGenerator
+      url: https://github.com/springwolf/springwolf-core/issues/368
+  pulls:
+    - title: Feature/rewrite example json generator
+      url: https://github.com/springwolf/springwolf-core/pull/394

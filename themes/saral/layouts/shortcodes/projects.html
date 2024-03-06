@@ -1,14 +1,9 @@
 {{ $projects := index .Site.Data "projects" }} {{ range $projects }}
 <div class="project-card">
-  {{ $username := .username }} {{ $reponame := .reponame }}
+  {{ $username := .username }} {{ $reponame := .reponame }}{{ $project_name := .title }}
   <div class="project-heading">
-    <!-- {{ with $reponame }} {{ $repoCardURL := printf
-    "https://github-readme-stats.vercel.app/api/pin/?username=%s&repo=%s&theme=dark&hide_border=true"
-    $username . }} {{ with $repoCardURL }}
-    <img src="{{ $repoCardURL }}" alt="" />
-    {{ end }} {{ end }} -->
     {{ with $reponame }}
-    <h2>{{ $reponame }}</h2>
+    <h2>{{ $project_name }}</h2>
     {{ end }}
   </div>
   <div class="project-details">
@@ -37,7 +32,7 @@
     <div class="tech-stack">
       <h4>Tech Stack :</h4>
       {{ range .stack }}
-      <img src="https://skillicons.dev/icons?i={{ . }}" alt="" />
+      <img style="color: aliceblue;" src="https://skillicons.dev/icons?i={{ . }}" alt="{{ . }}" />
       {{ end }}
     </div>
   </div>
