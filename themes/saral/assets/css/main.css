@@ -35,8 +35,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* font-family: "Plus Jakarta Sans", monospace; */
-  font-family: "Pacifico", cursive;
+  font-family: "Plus Jakarta Sans", monospace;
 }
 
 p,
@@ -55,6 +54,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
+  font-family: "Pacifico", cursive;
 }
 
 time {
@@ -482,6 +482,7 @@ blockquote {
 .opensource-contribution h3,
 .about h3 {
   text-decoration: underline;
+  
 }
 
 .project-heading,
