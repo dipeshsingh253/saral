@@ -5,3 +5,6 @@ theme = 'saral'
 
 pygmentsCodefences = true
 pygmentsStyle = "github-dark"
+
+[params]
+    logoText = "Dipesh"
