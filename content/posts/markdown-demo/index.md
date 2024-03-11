@@ -10,9 +10,12 @@ This article offers a sample of basic Markdown syntax that can be used in Hugo c
 
 <!--more-->
 
+![Demo Image](docker.jpg)
+
 ## Headings
 
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
+
 
 # H1
 
@@ -93,7 +96,7 @@ This is pre text
 
 #### Code block with backticks and language specified
 
-```html {linenos=true}
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -101,7 +104,7 @@ This is pre text
     <title>Example HTML5 Document</title>
     <meta
       name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements. is this site working because it is created by me or I have created so this site can work ?"
     />
   </head>
   <body>
@@ -115,7 +118,10 @@ This is pre text
     <!doctype html>
     <html lang="en">
     <head>
-      <meta charset="utf-8">
+         <meta
+      name="description"
+      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements. is this site working because it is created by me or I have created so this site can work ?"
+    />
       <title>Example HTML5 Document</title>
     </head>
     <body>
@@ -142,6 +148,10 @@ This is pre text
 #### Gist
 
 {{< gist spf13 7896402 >}}
+
+
+#### Example of Image shortcode
+{{< image src="/images/docker.jpg" alt="Example Image" class="medium" >}}
 
 ## List Types
 

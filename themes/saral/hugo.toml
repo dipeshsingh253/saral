@@ -40,3 +40,5 @@ author = "dipeshsingh253"
    url = "/journey/"
    weight = 50
   
+  [params]
+    logoText = "Saral"

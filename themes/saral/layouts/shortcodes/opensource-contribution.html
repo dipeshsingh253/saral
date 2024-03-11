@@ -1,14 +1,12 @@
 {{ $projects := index .Site.Data "opensource-contributions" }} {{ range
 $projects }} {{ $username := .username }} {{ $reponame := .reponame }} {{ $owner
-:= .owner }}
+:= .owner }} {{ $project_name := .title }}
 
 <div class="opensource-contribution">
   <div class="project-heading">
-    {{ with $reponame }} {{ $repoCardURL := printf
-    "https://github-readme-stats.vercel.app/api/pin/?username=%s&repo=%s&theme=dark&hide_border=true"
-    $owner . }} {{ with $repoCardURL }}
-    <img src="{{ $repoCardURL }}" alt="" />
-    {{ end }} {{ end }}
+    {{ with $reponame }}
+    <h2>{{ $project_name }}</h2>
+    {{ end }}
   </div>
   <div class="project-details">
     <!-- Display other fields like description, username, reponame, etc. -->
@@ -20,6 +18,7 @@ $projects }} {{ $username := .username }} {{ $reponame := .reponame }} {{ $owner
       {{ $githubURL := printf "https://github.com/%s/%s" $username $reponame }}
       {{ with $githubURL }}
       <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Github</a>
+      
       {{ end }} {{ with .website }}
       <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Website</a>
       {{ end }}

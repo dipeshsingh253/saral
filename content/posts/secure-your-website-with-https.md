@@ -8,6 +8,8 @@ tags = [ "webdevs", "security"]
 
 Website security is a top priority in today's digital landscape. One fundamental aspect of web security is implementing HTTPS (Hypertext Transfer Protocol Secure) to encrypt data transmitted between your website and its visitors.<!--more--> In this blog post, we'll discuss the importance of HTTPS, how to obtain an SSL/TLS certificate, and how to configure it on your web server to secure your website.
 
+
+
 ## The Importance of HTTPS
 
 HTTPS is crucial for ensuring the security and privacy of your website's visitors. It provides the following key benefits:
@@ -21,6 +23,8 @@ HTTPS is crucial for ensuring the security and privacy of your website's visitor
 4. **SEO Benefits:** Search engines like Google consider HTTPS as a ranking factor. Having an HTTPS-enabled website can positively impact your search engine rankings.
 
 ## Obtaining an SSL/TLS Certificate
+
+{{< image src="/images/tenor.gif" alt="Example Image" class="medium" >}}
 
 To enable HTTPS on your website, you need to obtain an SSL/TLS certificate from a Certificate Authority (CA). Here's how to do it:
 
