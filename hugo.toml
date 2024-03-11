@@ -8,3 +8,5 @@ pygmentsStyle = "github-dark"
 
 [params]
     logoText = "Dipesh"
+    isBlogFocused = false
+    showHeroImage = true

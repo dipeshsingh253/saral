@@ -2,7 +2,9 @@
 <main>
   <section class="hero">
     <div>
-      <img src="/images/avatar.jpeg" />
+      {{ if $.Site.Params.showHeroImage }}
+        <img src="/images/avatar.jpg" />
+      {{ end }}
       <span>
         <h1>{{ .Site.Data.profile.name }}</h1>
         <h2>{{ .Site.Data.profile.role }}</h2>
@@ -18,15 +20,19 @@
         {{ end }}
       </div>
     </div>
-    
   </section>
-</main>
-<div class="main-content">
-  <!-- <section class="about">
-    {{ with .Site.GetPage "section" "about" }}
-    {{ .Content }}
+  {{ if $.Site.Params.isBlogFocused }}
+    <section class="posts-section">
+      <h2>Recent Posts</h2>
+      <div>
+        {{ range first 5 (where .Site.RegularPages "Section" "posts") }} {{
+        partial "post/listview.html" . }} {{ end }}
+      </div>
+    </section>
   {{ end }}
-  </section> -->
+</main>
+{{ if not $.Site.Params.isBlogFocused }}
+<div class="main-content">
   <section class="journey">
     {{ with .Site.GetPage "section" "journey" }}
     {{ .Content }}
@@ -43,4 +49,5 @@
   {{ end }}
   </section>
  </div>
+ {{ end }}
 {{ end }}

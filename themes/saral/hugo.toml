@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'Saral : A simple hugo theme'
 author = "dipeshsingh253"
 
+[params]
+    logoText = "Saral"
+
 [menu]
   [[menu.main]]
     name = "Home"
