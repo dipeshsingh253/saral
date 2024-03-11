@@ -317,6 +317,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 }
 
 /* Tags and Posts Section */
+
 .tags,
 .posts-section {
   display: flex;
@@ -325,6 +326,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   margin: auto;
   padding-top: var(--navbar-height);
   padding-bottom: 35px;
+  width: 100%;
 }
 
 .tags div {
@@ -332,7 +334,8 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: start;
-  width: 60%;
+  max-width: 60%;
+  justify-content: center;
   gap: 1em;
 }
 
@@ -615,6 +618,10 @@ blockquote {
     width: auto;
   }
 
+  .tags div{
+    max-width: 90%;
+    justify-content: center;
+  }
   .tags > h1 {
     width: 90%;
   }
