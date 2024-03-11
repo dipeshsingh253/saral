@@ -2,7 +2,9 @@
 <main>
   <section class="hero">
     <div>
-      <img src="/images/avatar.jpg" />
+      {{ if $.Site.Params.showHeroImage }}
+        <img src="/images/avatar.jpg" />
+      {{ end }}
       <span>
         <h1>{{ .Site.Data.profile.name }}</h1>
         <h2>{{ .Site.Data.profile.role }}</h2>
@@ -19,13 +21,33 @@
       </div>
     </div>
   </section>
-  <section class="posts-section">
-    <h2>Recent Posts</h2>
-    <div>
-      {{ range first 5 (where .Site.RegularPages "Section" "posts") }} {{
-      partial "post/listview.html" . }} {{ end }}
-    </div>
-  </section>
+  {{ if $.Site.Params.isBlogFocused }}
+    <section class="posts-section">
+      <h2>Recent Posts</h2>
+      <div>
+        {{ range first 5 (where .Site.RegularPages "Section" "posts") }} {{
+        partial "post/listview.html" . }} {{ end }}
+      </div>
+    </section>
+  {{ end }}
 </main>
-
+{{ if not $.Site.Params.isBlogFocused }}
+<div class="main-content">
+  <section class="journey">
+    {{ with .Site.GetPage "section" "journey" }}
+    {{ .Content }}
+  {{ end }}
+  </section>
+  <section class="project">
+    {{ with .Site.GetPage "section" "project" }}
+    {{ .Content }}
+  {{ end }}
+  </section>
+  <section class="default">
+    {{ with .Site.GetPage "section" "contact" }}
+    {{ .Content }}
+  {{ end }}
+  </section>
+ </div>
+ {{ end }}
 {{ end }}

@@ -5,3 +5,8 @@ theme = 'saral'
 
 pygmentsCodefences = true
 pygmentsStyle = "github-dark"
+
+[params]
+    isBlogFocused = true
+    logoText = "Akira"
+    showHeroImage = true
