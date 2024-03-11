@@ -5,11 +5,11 @@ layout = 'journey'
 hideDate = true
 +++
 
-# 🚀 My Journey
+# 🚀 Journey
 
-Welcome to my journey—a timeline that chronicles my educational and professional experiences. Explore the milestones and achievements that have shaped my path, from learning and growth to exciting opportunities. This page offers insights into my story and the adventures that have led me to where I am today.
+Welcome to the Journey page, a space to unfold and showcase the timelines of your professional or personal adventures.
 
-Feel free to navigate through the timeline to discover more about my educational pursuits, career endeavors, and the valuable lessons I've gained along the way.
+With a simple YAML file and the magic of custom shortcodes, you can effortlessly breathe life into your journey. Just provide your data, utilize the custom shortcode, and voilà – your narrative takes flight.
 
 Let's embark on this journey together! 🌟
 

@@ -3,7 +3,7 @@ title = 'Markdown Demo'
 date = 2023-11-07T08:36:15+03:00
 draft = false
 layout = 'post'
-tags = ["docker", "containers", "devops"]
+tags = ["tutorial"]
 +++
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
@@ -79,70 +79,59 @@ Tables aren't part of the core Markdown spec, but Hugo supports them out-of-the-
 This is pre text
 </pre>
 
-#### Code block with backticks
-
-```
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Example HTML5 Document</title>
-    </head>
-    <body>
-        <p>Test</p>
-    </body>
-</html>
-```
 
 #### Code block with backticks and language specified
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-    <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements. is this site working because it is created by me or I have created so this site can work ?"
-    />
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Create a list of numbers
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        // Use streams to filter even numbers and double each one
+        List<Integer> result = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .map(n -> n * 2)
+                .collect(Collectors.toList());
+
+        // Display the result
+        System.out.println("Original Numbers: " + numbers);
+        System.out.println("Filtered and Doubled: " + result);
+    }
+}
+
 ```
-
-#### Code block indented with four spaces
-
-    <!doctype html>
-    <html lang="en">
-    <head>
-         <meta
-      name="description"
-      content="Sample article showcasing basic Markdown syntax and formatting for HTML elements. is this site working because it is created by me or I have created so this site can work ?"
-    />
-      <title>Example HTML5 Document</title>
-    </head>
-    <body>
-      <p>Test</p>
-    </body>
-    </html>
 
 #### Code block with Hugo's internal highlight shortcode
 
-{{< highlight html >}}
+{{< highlight java >}}
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
+public class Main {
+
+    public static void main(String[] args) {
+        // Create a list of numbers
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        // Use streams to filter even numbers and double each one
+        List<Integer> result = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .map(n -> n * 2)
+                .collect(Collectors.toList());
+
+        // Display the result
+        System.out.println("Original Numbers: " + numbers);
+        System.out.println("Filtered and Doubled: " + result);
+    }
+}
+
 {{< /highlight >}}
 
 #### Gist
@@ -179,6 +168,9 @@ This is pre text
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 
+{{< note >}}
+Some of below features may not work yet, but I am planing to add them in near future.
+{{< /note >}}
 <abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
 
 H<sub>2</sub>O
