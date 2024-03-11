@@ -7,6 +7,6 @@ pygmentsCodefences = true
 pygmentsStyle = "github-dark"
 
 [params]
-    logoText = "Dipesh"
+    logoText = "Saral"
     isBlogFocused = false
     showHeroImage = true
