@@ -1,4 +1,4 @@
-baseURL = 'http://192.168.29.7:1313'
+baseURL = 'http://saral-hugo-theme.pages.dev'
 languageCode = 'en-us'
 title = 'Saral : A simple hugo theme'
 author = "dipeshsingh253"
@@ -40,3 +40,5 @@ author = "dipeshsingh253"
    url = "/journey/"
    weight = 50
   
+  [params]
+    logoText = "Saral"

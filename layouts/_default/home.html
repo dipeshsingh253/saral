@@ -10,7 +10,11 @@
       <p>{{ .Site.Data.profile.slogan }}</p>
       <div class="socials">
         {{ range .Site.Data.profile.socials }}
-        <a target="_blank" href="{{ .url }}"><span>{{ .name }}</span></a>
+          {{ if eq .name "Email" }}
+            <a target="_blank" href="mailto:{{ .url }}"><span>{{ .name }}</span></a>
+          {{ else }}
+            <a target="_blank" href="{{ .url }}"><span>{{ .name }}</span></a>
+          {{ end }}
         {{ end }}
       </div>
     </div>

@@ -1,19 +1,21 @@
 /* Import Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Ubuntu+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans&family=Ubuntu+Mono:wght@400;700&display=swap");
 
 /* Variables */
 :root {
+  /* 2f5c8f */
+  /* used as background-color of elements , used as common color for elements, used as to highlight some part of code*/
   --primary-color: black;
   --secondary-color: #c2ccdf;
-  --accent-color: #ffbd7a;
+  --accent-color: #ADD8E6;
   --note-color: rgb(250, 115, 115);
   --heading-color: #c2ccdf;
   --container-border-color: #727382;
   --text-color: #727382;
-  --navbar-height: 70px;
+  --navbar-height: 70px; /* We can use this to define padding for many elements. */
   --menu-button-width: 32px;
   --menu-button-height: 4px;
-  --shadow-one: rgba(255, 255, 255, 0.02);
+  --shadow-one:  #c2ccdf; /* Adjusted for dark mode */
   --shadow-two: rgba(255, 255, 255, 0.15);
 }
 
@@ -24,7 +26,7 @@
   --note-color: rgb(250, 115, 115);
   --heading-color: #233044;
   --container-border-color: #454963;
-  --shadow-one: rgba(0, 0, 0, 0.02);
+  --shadow-one: #454963;
   --shadow-two: rgba(27, 31, 35, 0.15);
   --text-color: #454963; /* We can use this to define padding for many elements. */
 }
@@ -90,6 +92,11 @@ main {
 
 footer {
   text-align: center;
+  padding: 1em;
+}
+
+footer p{
+  font-size: 15px;
 }
 
 /* Header Styles */
@@ -146,9 +153,13 @@ header .navbar a {
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 24px;
+  font-style: italic;
+  border-bottom: 3px solid var(--accent-color);
+  line-height: normal;
+  font-family: "Pacifico", cursive;
 }
-header .logo {
+header img {
   font-size: 24px;
   width: 35px;
   height: auto;
@@ -328,7 +339,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 .tags div span {
   border-radius: 8px;
   box-shadow: var(--container-border-color) 0px 1px 3px 0px,
-    var(--primary-color) 0px 0px 0px 1px;
+    var(--secondary-color) 0px 0px 0px 1px;
   padding: 4px 8px;
   font-size: large;
 }
@@ -380,7 +391,9 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   width: 100%;
   border-radius: 1em;
 }
-
+.post .medium {
+  width: 60%;
+}
 .meta-heading {
   border-bottom: 0.5px solid var(--container-border-color);
   text-align: center;
@@ -416,7 +429,7 @@ figcaption {
   color: var(--secondary-color);
   text-decoration: none;
   box-shadow: var(--container-border-color) 0px 1px 3px 0px,
-    var(--primary-color) 0px 0px 0px 1px;
+    var(--secondary-color) 0px 0px 0px 1px;
   padding: 5px 10px;
   border-radius: 8px;
 }
@@ -459,12 +472,16 @@ blockquote {
 
 /* Project Section style */
 
-.project-card,
+ .project-card,
 .profile-card,
 .opensource-contribution {
+
+
   display: flex;
   margin: 30px 0;
   flex-direction: column;
+  justify-content: center;
+  align-items: start;
   box-shadow: var(--shadow-one) 0px 1px 3px 0px,
     var(--shadow-two) 0px 0px 0px 1px;
   border-radius: 10px;
@@ -475,19 +492,40 @@ blockquote {
 .opensource-contribution h3,
 .about h3 {
   text-decoration: underline;
+  
 }
-
 .project-heading,
 .profiel-heading {
   display: flex;
   flex-direction: column;
   align-items: self-start;
-  gap: 10px;
 }
-
+.tech-stack img{
+  padding: 0 5px;
+}
+.tech-stack h4{
+  padding-bottom: 10px;
+}
 .profile-card {
   border: none;
   box-shadow: none;
+} 
+.project-links{
+  margin: 5px 0px;
+}
+.project-links a{
+  border: 1px solid var(--container-border-color);
+  padding: 2px;
+  text-decoration: none;
+  border-radius: 5px;
+} 
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
 }
 
 .about h2 {
@@ -508,7 +546,6 @@ blockquote {
   padding-top: 1em;
   padding-bottom: 0.5em;
 }
-
 .error {
   margin: auto;
 }
@@ -519,10 +556,10 @@ blockquote {
 }
 
 .note {
-  color: var(--accent-color);
+  color: var(--note-color);
   padding: 10px;
   margin-bottom: 15px;
-  border-left: 1px solid var(--note-color);
+  border-left: 1px solid var(--accent-color);
 }
 /* Media Queries */
 @media only screen and (min-width: 768px) {
@@ -640,7 +677,7 @@ code,
 }
 
 pre {
-  border-radius: 3px;
+  border-radius: 0.5em;
   padding: 20px;
   position: relative;
   overflow-x: auto;
@@ -651,7 +688,7 @@ code {
 }
 
 .highlight {
-  border-radius: 5px;
+  border-radius: 0.5em;
   overflow-x: auto;
   position: relative;
 }
@@ -660,10 +697,11 @@ code {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #3498db;
-  color: #fff;
+  background: var(--accent-color);
+  color: var(--primary-color);
   padding: 5px 10px;
-  border: none;
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
   cursor: pointer;
 }
 
