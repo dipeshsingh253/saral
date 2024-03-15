@@ -33,11 +33,6 @@ author = "dipeshsingh253"
     url = "/contact/"
     weight = 60
   [[menu.main]]
-    name = "Resume"
-    pre = "resume"
-    url = "/resume/"
-    weight = 70
-  [[menu.main]]
    name = "Journey"
    pre = "journey"
    url = "/journey/"
