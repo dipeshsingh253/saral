@@ -2,6 +2,8 @@
 
 Saral, meaning "simple" in Hindi (सरल), is a minimalist and elegant Hugo theme designed for those who appreciate clean and straightforward aesthetics. Embrace simplicity without compromising style.
 
+![Saral's landing page](https://raw.githubusercontent.com/dipeshsingh253/saral/main/images/screenshot.png)
+
 ## Features
 
 - **Clean Design:** Streamlined and clutter-free layout for a seamless user experience.
@@ -9,6 +11,7 @@ Saral, meaning "simple" in Hindi (सरल), is a minimalist and elegant Hugo t
 - **Customizable:** Tailor the theme to your preferences with easy-to-use customization options.
 - **Performance:** Lightweight and optimized for fast loading times.
 - **Code Block:** You can choose any of the available code block themes [here](https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma)
+  - Note: changing code block colors as of now is having some issues that can be fixed by modifying the style for code and pre in main.css. Planning to fix it in the future.
 
 ## Getting Started
 
@@ -31,7 +34,7 @@ theme = "saral"
 
 ## Support and Contribution
 
-For support or issues, please [open an issue](https://github.com/yourusername/saral/issues). Contributions are welcome!
+For support or issues, please [open an issue](https://github.com/dipeshsingh253/saral/issues). Contributions are welcome!
 
 ## License
 
