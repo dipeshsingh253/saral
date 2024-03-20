@@ -5,7 +5,11 @@ author = "dipeshsingh253"
 
 [params]
     logoText = "Saral"
-
+    isBlogFocused = true
+    logoText = "Saral"
+    showHeroImage = true
+    showResumeButton = false
+    
 [menu]
   [[menu.main]]
     name = "Home"
