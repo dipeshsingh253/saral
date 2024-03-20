@@ -50,5 +50,8 @@ Renders a menu for the given menu ID.
       {{- end }}
     </li>
   {{- end }}
-  <li><a href="/Dipesh-Singh-Resume.pdf" download class="resume">Resume</a></li>
+  {{ if $page.Site.Params.showResumeButton }}
+    <li><a href="/Dipesh-Singh-Resume.pdf" download class="resume">Resume</a></li>
+  {{ end }}
+  
 {{- end }}

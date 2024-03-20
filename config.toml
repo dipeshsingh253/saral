@@ -10,3 +10,4 @@ pygmentsStyle = "github-dark"
     isBlogFocused = true
     logoText = "Saral"
     showHeroImage = true
+    showResumeButton = false
