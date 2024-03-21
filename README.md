@@ -15,6 +15,13 @@ Saral, meaning "simple" in Hindi (सरल), is a minimalist and elegant Hugo t
 - **Code Block:** You can choose any of the available code block themes [here](https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma)
 > Note: Currently, there are issues with changing code block colors, which can be resolved by adjusting the style for `code` and `pre` elements in `main.css`. This is planned to be addressed in the future. Open to your suggestions on this !!!
 
+
+## Demo Links
+   - [Blog Focused Version](https://saral-hugo-theme.pages.dev/)
+   - [Portfolio Focused Version](https://one-page-portfolio.saral-hugo-theme.pages.dev/)
+
+> You can visit the branch exampleSite for Blog-Focused-Version & one-page-portfolio branch for Portfolio-Foucsed-Version example configurations.
+
 ## Getting Started
 
 1. **Installation:**
