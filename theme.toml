@@ -15,4 +15,4 @@ features = ["some", "awesome", "features"]
 # If the theme has a single author
 [author]
   name = 'Dipesh Singh'
-  homepage = 'dipesh.dev'
+  homepage = 'https://dipesh.dev'
