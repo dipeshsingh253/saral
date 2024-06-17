@@ -1,15 +1,37 @@
 name = 'Saral'
 license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
+licenselink = 'https://github.com/dipeshsingh253/saral/LICENSE'
 description = 'Embrace simplicity without compromising style.'
 
 # The home page of the theme, where the source can be found
-homepage = 'https://github.com/dipeshsingh253/saral-hugo-theme'
+homepage = 'https://github.com/dipeshsingh253/saral'
 
 # If you have a running demo of the theme
 demosite = 'https://saral-hugo-theme.pages.dev'
 
+tags = [
+  "responsive",
+  "simple",
+  "clean",
+  "light",
+  "dark",
+  "blog",
+  "minimalist",
+  "highlight.js",
+  "search"
+]
+features = [
+  "responsive",
+  "single-column",
+  "blog",
+  "highlight.js",
+  "favicon",
+  "social-icons",
+  "theme-toggle",
+  "menu-location-indicator",
+]
+
 # If the theme has a single author
 [author]
   name = 'Dipesh Singh'
-  homepage = 'dipesh.dev'
+  homepage = 'https://dipesh.dev'

@@ -180,3 +180,35 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
+## Mathematics
+
+@@
+a^{x-b}
+@@
+
+@@
+\int_{a}^{b} f(x)\,dx = F(b) - F(a)
+@@
+
+@@
+S_n = \frac{n}{2} \cdot (a + l)
+@@
+
+The chemical formula for water is @ \text{H}_{2}\text{O} @.
+
+
+@@ E = mc^2 @@
+
+@@
+F = ma
+@@
+
+
+@@
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+@@
+
+@@
+e^{i\pi} + 1 = 0
+@@

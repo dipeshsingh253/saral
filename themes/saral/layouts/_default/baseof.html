@@ -5,6 +5,9 @@
 >
   <head>
     {{ partial "head.html" . }}
+    {{ if .Param "math" }}
+      {{ partialCached "math.html" . }}
+    {{ end }}
   </head>
   <body>
     <header>{{ partial "header.html" . }}</header>
