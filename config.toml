@@ -3,11 +3,25 @@ languageCode = 'en-us'
 title = 'Saral : A simple hugo theme'
 author = "dipeshsingh253"
 
+# theme = 'saral'
+pygmentsCodefences = true
+pygmentsStyle = "doom-one"
+
 [params]
     logoText = "Saral"
     isBlogFocused = true
     showHeroImage = true
     showResumeButton = false
+    math = true
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['@@', '@@']]
+          inline = [['@', '@']]
     
 [menu]
   [[menu.main]]

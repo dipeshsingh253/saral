@@ -38,6 +38,10 @@
   font-family: "Plus Jakarta Sans", monospace;
 }
 
+code span{
+  font-family: "Ubuntu Mono", monospace;
+}
+
 p,
 li,
 ul,
@@ -357,7 +361,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   text-decoration: none;
   display: flex;
   margin: 1.5em auto;
-  max-width: 72ch;
+  max-width: 60%;
   padding: 1em;
   box-shadow: var(--shadow-one) 0px 1px 3px 0px,
     var(--shadow-two) 0px 0px 0px 1px;
@@ -474,12 +478,9 @@ blockquote {
 }
 
 /* Project Section style */
-
  .project-card,
 .profile-card,
 .opensource-contribution {
-
-
   display: flex;
   margin: 30px 0;
   flex-direction: column;
@@ -564,128 +565,13 @@ blockquote {
   margin-bottom: 15px;
   border-left: 1px solid var(--accent-color);
 }
-/* Media Queries */
-@media only screen and (min-width: 768px) {
-  /* Large Screens  */
-  #overlay-button {
-    display: none;
-  }
 
-  #overlay {
-    position: static;
-    visibility: visible;
-    opacity: 0.8;
-  }
-
-  #overlay ul {
-    height: auto;
-    width: auto;
-    flex-direction: row;
-    gap: 1em;
-  }
-
-  #overlay ul li {
-    padding: 0;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  /* Small Screeens  */
-  .navbar,
-  .main-content,
-  .posts-section,
-  .tags div {
-    width: 90%;
-  }
-
-  .post-element {
-    padding: 1em 0.5em;
-  }
-  .project-card,
-  .opensource-contribution {
-    margin: 0;
-    margin-top: 1em;
-    margin-bottom: 2em;
-  }
-
-  .project-card img,
-  .opensource-contribution img,
-  .profile-card img {
-    width: 100%;
-  }
-
-  .tech-stack img {
-    width: auto;
-  }
-
-  .tags div{
-    max-width: 90%;
-    justify-content: center;
-  }
-  .tags > h1 {
-    width: 90%;
-  }
-
-  .hero div .socials {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .open-menu-button,
-  .close-menu-button {
-    display: block;
-  }
-
-  .timeline-area div {
-    width: 95%;
-  }
-
-  .error h1 {
-    font-size: 2em;
-  }
-
-  .meta-heading h1 {
-    font-size: 3em;
-  }
-
-  .meta-heading > span {
-    flex-direction: column;
-    align-items: start;
-    padding: 0;
-  }
-
-  .meta-heading > span > time,
-  .post-tags {
-    margin: 1em 0;
-  }
-}
-
-@media only screen and (max-height: 500px) and (orientation: landscape) {
-  /* Portrait Screens  */
-  .main-content {
-    padding-top: 15vh;
-  }
-
-  .navbar {
-    width: 90%;
-  }
-
-  .hero {
-    padding-top: 15vh;
-  }
-}
 
 /* Code Blocks */
-pre,
-code,
-.highlight {
-  background-color: #0d1117;
-  color: white;
-}
 
 pre {
   border-radius: 0.5em;
-  padding: 20px;
+  padding: 10px;
   position: relative;
   overflow-x: auto;
 }
@@ -747,6 +633,120 @@ code {
 .timeline-area p {
   margin-bottom: 0;
 }
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  /* Large Screens  */
+  #overlay-button {
+    display: none;
+  }
+
+  #overlay {
+    position: static;
+    visibility: visible;
+    opacity: 0.8;
+  }
+
+  #overlay ul {
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  #overlay ul li {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Small Screeens  */
+  .navbar,
+  .main-content,
+  .posts-section,
+  .tags div {
+    width: 90%;
+  }
+
+  .post-element {
+    padding: 1em 0.5em;
+    max-width: 100%;
+  }
+  .project-card,
+  .opensource-contribution {
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+
+  .project-card img,
+  .opensource-contribution img,
+  .profile-card img {
+    width: 100%;
+  }
+
+  .tech-stack img {
+    width: auto;
+    padding: 0 2.5px;
+  }
+
+  .tags div{
+    max-width: 90%;
+    justify-content: center;
+  }
+  .tags > h1 {
+    width: 90%;
+  }
+
+  .hero div .socials {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .open-menu-button,
+  .close-menu-button {
+    display: block;
+  }
+
+  .timeline-area div {
+    width: 95%;
+  }
+
+  .error h1 {
+    font-size: 2em;
+  }
+
+  .meta-heading h1 {
+    font-size: 3em;
+  }
+
+  .meta-heading > span {
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+  }
+
+  .meta-heading > span > time,
+  .post-tags {
+    margin: 1em 0;
+  }
+}
+
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  /* Portrait Screens  */
+  .main-content {
+    padding-top: 15vh;
+  }
+
+  .navbar {
+    width: 90%;
+  }
+
+  .hero {
+    padding-top: 15vh;
+  }
+}
+
 
 @keyframes bugfix {
   from {
