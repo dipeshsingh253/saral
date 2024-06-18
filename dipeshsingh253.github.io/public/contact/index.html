@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  dir="ltr"
+>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+  Contact | Dipesh Singh : Full Stack Developer
+</title>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+
+  </head>
+  <body>
+    <header>
+<nav class="navbar">
+  <a href="/">
+    
+    <p class="logo">Dipesh</p>
+  </a>
+<input type="checkbox" id="overlay-input" />
+<label for="overlay-input" id="overlay-button"><span></span></label>
+  <div id="overlay">
+    <ul>
+
+    <li>
+      <a href="/">Home</a>
+    </li>
+
+    <li>
+      <a href="/posts/">Posts</a>
+    </li>
+
+    <li>
+      <a href="/project/">Project</a>
+    </li>
+
+    <li>
+      <a href="/about/">About</a>
+    </li>
+
+    <li>
+      <a href="/journey/">Journey</a>
+    </li>
+
+    <li>
+      <a class="active_menu" href="/contact/">Contact</a>
+    </li>
+  <li><a href="/Dipesh-Singh-Resume.pdf" download class="resume">Resume</a></li>
+      <li><button id="mode-toggle">☀️</button></li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+    
+
+<main class="main-content">
+  
+  <section class="default"><h1 id="get-in-touch-">Get in Touch! 👋</h1>
+<p>Hello there, fellow tech enthusiast! 🚀</p>
+<p>I&rsquo;m thrilled that you&rsquo;ve dropped by. Whether you have a burning question, an exciting project idea, or just want to chat about all things code, I&rsquo;m all ears.</p>
+<p>Let&rsquo;s make this the start of a fantastic conversation. Feel free to reach out, and I&rsquo;ll get back to you as soon as I can.</p>
+<p>Cheers to the future collaborations and coding adventures! 🌟</p>
+<h3 id="-reach-out-via-email">📧 Reach out via email:</h3>
+<p><strong>Email :</strong> <a href="mailto:sinhdipesh@gmail.com">sinhdipesh@gmail.com</a></p>
+<h3 id="-connect-with-me-online">🌐 Connect with me online:</h3>
+<p><a href="http://discordapp.com/users/849913360144400404"><img src="https://skillicons.dev/icons?i=discord" alt="Discord"></a>
+<a href="https://twitter.com/dipeshSingh_253"><img src="https://skillicons.dev/icons?i=twitter" alt="Twitter"></a>
+<a href="https://www.linkedin.com/in/dipesh-singh253/"><img src="https://skillicons.dev/icons?i=linkedin" alt="Linkedin"></a>
+<a href="https://github.com/dipeshsingh253/"><img src="https://skillicons.dev/icons?i=github" alt="Github"></a></p>
+<p>Looking forward to hearing from you soon! 📩</p>
+</section>
+  
+</main>
+
+
+    <footer><p>&copy; 2024 <a href="https://github.com/dipeshsingh25/saral-hugo-theme">Saral</a> Powered by <a href="https://gothugo.io">Hugo</a> & <a href="https://github.com/dipeshsingh25/saral-hugo-theme">Saral</a></p>
+
+<script src="/js/main.js"></script>
+<script>
+  var prevScrollPos = window.pageYOffset;
+  var checkBox = document.getElementById("overlay-input");
+
+
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    var header = document.getElementsByTagName("header")[0];
+
+    if (prevScrollPos > currentScrollPos) {
+      header.style.display = "flex";
+    } else {
+      header.style.display = "none";
+      checkBox.checked = false;
+    }
+    prevScrollPos = currentScrollPos;
+  };
+</script>
+<script>
+  
+  document.querySelectorAll("pre > code").forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement("button");
+    copybutton.classList.add("copy-code");
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener("click", (cb) => {
+      if ("clipboard" in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand("copy");
+        copyingDone();
+      } catch (e) {}
+      selection.removeRange(range);
+    });
+
+if (container.classList.contains("highlight")) {
+
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode
+        .nodeName == "TABLE"
+    ) {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(
+        copybutton
+      );
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+</footer>
+  </body>
+</html>

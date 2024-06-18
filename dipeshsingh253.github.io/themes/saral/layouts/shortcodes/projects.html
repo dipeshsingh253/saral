@@ -1,0 +1,43 @@
+{{ $projects := index .Site.Data "projects" }} {{ range $projects }}
+<div class="project-card">
+  {{ $username := .username }} {{ $reponame := .reponame }}{{ $project_name := .title }}
+  <div class="project-heading">
+    {{ with $reponame }}
+    <h2>{{ $project_name }}</h2>
+    {{ end }}
+  </div>
+  <div class="project-details">
+    <div class="description">
+      <p>{{ .description }}</p>
+    </div>
+    <div class="project-links">
+      {{ $githubURL := printf "https://github.com/%s/%s" $username $reponame }}
+      {{ with $githubURL }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Github</a>
+      
+      {{ end }} {{ with .livedemo }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Demo</a>
+      
+      {{ end }} {{ with .presentation }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+        >Presentation</a
+      >
+      {{ end }}
+    </div>
+    <div class="features">
+      <h4>Features :</h4>
+      <ul>
+        {{ range .features }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="tech-stack">
+      <h4>Tech Stack :</h4>
+      {{ range .stack }}
+      <img src="https://skillicons.dev/icons?i={{ . }}" alt="{{ . }}" />
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

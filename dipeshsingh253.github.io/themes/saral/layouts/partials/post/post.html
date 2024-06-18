@@ -1,0 +1,17 @@
+{{- $page := . }}
+
+<section class="posts-section">
+  <section class="tags">
+    {{- $page_url:= $page.Permalink | absLangURL }}
+    <div>
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }} {{ with
+      $.Site.GetPage (printf "/tags/%s" $name) }} {{- $tag_url := .Permalink}}
+      <span {{- if eq $tag_url $page_url }} class="active_tag" {{- end }}>
+        <a href="{{ $tag_url }}">{{ $name }}</a>
+      </span>
+      {{ end }} {{ end }}
+    </div>
+  </section>
+
+  <div>{{ range .Pages }} {{ partial "post/listview.html" . }} {{ end }}</div>
+</section>

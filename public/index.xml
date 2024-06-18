@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Dipesh Singh : Full Stack Developer</title>
+    <link>https://dipesh.dev/</link>
+    <description>Recent content in Home on Dipesh Singh : Full Stack Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jan 2023 08:00:00 -0700</lastBuildDate><atom:link href="https://dipesh.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projects</title>
+      <link>https://dipesh.dev/project/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dipesh.dev/project/</guid>
+      <description>🤝 Open Source Contributions KeycloakOpen Source Identity and Access Management For Modern Applications and Services
+GithubWebsiteIssues:Admin UI: Show realm display name on welcome pageKeycloak development server doesn&amp;#39;t work on WindowsPulls:show displayName as default on welcome pagemodifying start-server.js to work on windowsQuarkus Test SuiteTest Suite for Quarkus integration scenarios. Among the standard Quarkus test features, scenarios hardly rely on Quarkus-test-framework features</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://dipesh.dev/about/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      
+      <guid>https://dipesh.dev/about/</guid>
+      <description>About Me 👋 Hello, world! 🌎 I&amp;rsquo;m Dipesh Singh, a passionate coding enthusiast and lifelong learner from India 🇮🇳.
+📖 Crafting interactive websites that captivate and inspire. 🧩 Solving digital puzzles, diving into algorithms, and architecting elegant solutions.
+My journey explores the diverse realms of full-stack development, encompassing frontend, backend, and DevOps technologies. I am always eager to embrace and master new tech stacks, believing that each line of code I contribute holds the potential to shape the future 🌟.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://dipesh.dev/contact/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      
+      <guid>https://dipesh.dev/contact/</guid>
+      <description>Get in Touch! 👋 Hello there, fellow tech enthusiast! 🚀
+I&amp;rsquo;m thrilled that you&amp;rsquo;ve dropped by. Whether you have a burning question, an exciting project idea, or just want to chat about all things code, I&amp;rsquo;m all ears.
+Let&amp;rsquo;s make this the start of a fantastic conversation. Feel free to reach out, and I&amp;rsquo;ll get back to you as soon as I can.
+Cheers to the future collaborations and coding adventures!</description>
+    </item>
+    
+    <item>
+      <title>Journey</title>
+      <link>https://dipesh.dev/journey/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      
+      <guid>https://dipesh.dev/journey/</guid>
+      <description>🚀 My Journey Welcome to my journey—a timeline that chronicles my educational and professional experiences. Explore the milestones and achievements that have shaped my path, from learning and growth to exciting opportunities. This page offers insights into my story and the adventures that have led me to where I am today.
+Feel free to navigate through the timeline to discover more about my educational pursuits, career endeavors, and the valuable lessons I’ve gained along the way.</description>
+    </item>
+    
+  </channel>
+</rss>

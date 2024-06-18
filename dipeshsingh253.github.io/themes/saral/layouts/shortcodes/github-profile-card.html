@@ -1,0 +1,10 @@
+{{ $profile := index .Site.Data "profile" }}
+<div class="profile-card">
+  <div class="profile-heading">
+    {{ $profileCardURL := printf
+    "https://github-stats-alpha.vercel.app/api?username=%s&cc=000&tc=fff&ic=fff&bc=000"
+    $profile.username }} {{ with $profileCardURL }}
+    <img src="{{ $profileCardURL }}" alt="" />
+    {{ end }}
+  </div>
+</div>

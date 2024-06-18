@@ -1,0 +1,26 @@
+baseURL = 'https://dipesh.dev/'
+languageCode = 'en-us'
+title = 'Dipesh Singh : Full Stack Developer'
+
+theme = 'saral'
+pygmentsCodefences = true
+pygmentsStyle = "doom-one"
+
+[params]
+    logoText = "Dipesh"
+    showHeroImage = false
+    isBlogFocused = false
+    math = true
+
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['@@', '@@']]
+          inline = [['@', '@']]
+
+

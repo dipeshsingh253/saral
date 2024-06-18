@@ -1,0 +1,57 @@
+{{ $projects := index .Site.Data "opensource-contributions" }} {{ range
+$projects }} {{ $username := .username }} {{ $reponame := .reponame }} {{ $owner
+:= .owner }} {{ $project_name := .title }}
+
+<div class="opensource-contribution">
+  <div class="project-heading">
+    {{ with $reponame }}
+    <h2>{{ $project_name }}</h2>
+    {{ end }}
+  </div>
+  <div class="project-details">
+    <!-- Display other fields like description, username, reponame, etc. -->
+    <div>
+      <p>{{ .description }}</p>
+    </div>
+
+    <div class="project-links">
+      {{ $githubURL := printf "https://github.com/%s/%s" $username $reponame }}
+      {{ with $githubURL }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Github</a>
+      
+      {{ end }} {{ with .website }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">Website</a>
+      {{ end }}
+    </div>
+
+    <!-- Display the list of issues -->
+    {{ with .issues }}
+    <h4>Issues:</h4>
+    <ul>
+      {{ range . }}
+      <li>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+          >{{ .title }}</a
+        >
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+
+    <!-- Display the list of PRs -->
+    {{ with .pulls }}
+    <h4>Pulls:</h4>
+    <ul>
+      {{ range . }}
+      <li>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+          >{{ .title }}</a
+        >
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}

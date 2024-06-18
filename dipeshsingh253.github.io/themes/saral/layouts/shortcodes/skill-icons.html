@@ -1,0 +1,8 @@
+{{ $skills := split .Inner "," }}
+<div>
+  {{ range $skills }}
+    {{ $skill := trim . " " }}
+    <img src="https://skillicons.dev/icons?i={{ $skill }}" alt="{{ $skill }}" />
+  {{ end }}
+</div>
+

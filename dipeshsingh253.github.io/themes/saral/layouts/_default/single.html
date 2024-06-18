@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<main class="main-content">
+  {{ if eq .Layout "post" }} {{ partial "common/meta-heading.html" . }}
+  <section class="post">
+    {{ .Content }} 
+  </section>
+  {{ else if eq .Layout "about" }}
+  <section class="about">{{ .Content }}</section>
+  {{ else if eq .Layout "project" }} {{ partial "common/toc.html" (dict "title"
+  "On This Page" "page" .) }}
+  <section class="project">{{ .Content }}</section>
+  {{ else if eq .Layout "journey" }}
+  <section class="journey">{{ .Content }}</section>
+  {{else}}
+  <section class="default">{{.Content}}</section>
+  {{end}}
+</main>
+{{ end }}
