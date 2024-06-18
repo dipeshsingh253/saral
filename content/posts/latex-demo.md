@@ -1,15 +1,20 @@
 +++
-title = 'Latex Demo'
-date = 2024-06-18T08:45:56+03:00
+title = 'Latex Demo : Demonstrating LaTeX in Hugo'
+date = 2024-06-18T08:56:51+03:00
 draft = false
 layout = 'post'
+tags = ['demo', 'latex']
 +++
 
-## Demonstrating LaTeX in Hugo
+
 
 This blog post demonstrates how to use LaTeX in Hugo for various types of equations and theories, including mathematics, physics, and chemistry.
 
+
+<!--more-->
+
 ### Mathematical Equations
+
 
 #### Quadratic Formula
 The quadratic formula is used to solve quadratic equations and is given by:

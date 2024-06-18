@@ -1,11 +1,9 @@
 +++
 title = 'Contact'
-date = 2023-03-15T11:00:00-07:00
+date = 2024-06-18T11:38:32+03:00
 draft = false
-hideDate = true
 layout = 'contact'
-Type = "page"
-Section = "default"
+hidedate = true
 +++
 
 # Get in Touch! 👋

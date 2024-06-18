@@ -1,8 +1,9 @@
 +++
 title = 'Journey'
-date = 2023-03-15T11:00:00-07:00
+date = 2024-06-18T10:22:33+03:00
+draft = true
 layout = 'journey'
-hideDate = true
+hidedate = true
 +++
 
 # 🚀 Journey
@@ -20,3 +21,4 @@ Let's embark on this journey together! 🌟
 # 🎓 Education :
 
 {{< timeline education >}}
+

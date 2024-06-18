@@ -324,21 +324,21 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 
 .tags,
 .posts-section {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: left;
   margin: auto;
   padding-top: var(--navbar-height);
   padding-bottom: 35px;
-  width: 100%;
 }
 
 .tags div {
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
   flex-wrap: wrap;
   align-items: start;
-  max-width: 60%;
+  max-width: 70%;
   justify-content: center;
   gap: 1em;
 }
@@ -361,7 +361,8 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   text-decoration: none;
   display: flex;
   margin: 1.5em auto;
-  max-width: 60%;
+  max-width: 70%;
+  min-height: 120px;
   padding: 1em;
   box-shadow: var(--shadow-one) 0px 1px 3px 0px,
     var(--shadow-two) 0px 0px 0px 1px;
@@ -370,6 +371,12 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 
 .posts-section p {
   color: var(--text-color);
+}
+
+.posts-section > h2 {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1em;
 }
 
 /* Post Content Styles */
@@ -430,6 +437,9 @@ figcaption {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+.post-tags span {
+  margin: 0 3px;
 }
 
 .post-tags span a {

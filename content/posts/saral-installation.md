@@ -1,53 +1,133 @@
 +++
-title = 'Saral theme installation'
-date = 2024-03-11T08:36:15+03:00
+title = 'Saral Installation'
+date = 2024-06-18T09:17:54+03:00
 draft = false
 layout = 'post'
-tags = ["hugo", "saral", "tutorial"]
+tags = ['hugo', 'portfolio', 'imagination', 'mathematics', 'android', 'linux', 'windows']
 +++
 
-Installing saral theme in your hugo website is just as easy as cloning a repo in your environment. You just have to clone the saral repo and configure hugo.toml to use saral theme.
 
+This guide provides step-by-step instructions on how to install the Saral theme for both new and existing projects. Saral is a versatile and stylish theme that can enhance the visual appeal of your website.
 <!--more-->
-# Saral Hugo Theme
+## Prerequisites
 
-Saral, meaning "simple" in Hindi (सरल), is a minimalist and elegant Hugo theme designed for those who appreciate clean and straightforward aesthetics. Embrace simplicity without compromising style.
+Before you begin, ensure you have the following:
+- A working installation of your static site generator (e.g., Hugo, Jekyll)
+- Basic knowledge of using the command line
+- A text editor
 
-## Features
+## Installing Saral for a New Project
 
-- **Clean Design:** Streamlined and clutter-free layout for a seamless user experience.
-- **Responsive:** Ensures a consistent and visually appealing presentation across devices.
-- **Customizable:** Tailor the theme to your preferences with easy-to-use customization options.
-- **Performance:** Lightweight and optimized for fast loading times.
-- **Code Block:** You can choose any of the available code block themes [here](https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma)
+### Step 1: Create a New Project
 
-## Getting Started
+First, create a new project using your static site generator. For example, if you're using Hugo:
 
-1. **Installation:**
-   - Clone this repository into your Hugo project's `themes` directory.
-   - Configure your `config.toml` file to use the Saral theme.
+```bash
+hugo new site my-new-site
+cd my-new-site
+```
 
-```toml
+### Step 2: Add the Saral Theme
+
+Next, add the Saral theme as a Git submodule or download it directly.
+
+#### Using Git Submodule
+
+```bash
+git init
+git submodule add https://github.com/yourusername/saral.git themes/saral
+```
+
+#### Downloading Directly
+
+Alternatively, you can download the theme and extract it to the `themes` directory:
+
+```bash
+mkdir themes
+cd themes
+wget https://github.com/yourusername/saral/archive/main.zip
+unzip main.zip
+mv saral-main saral
+rm main.zip
+cd ..
+```
+
+### Step 3: Configure the Theme
+
+Open the `config.toml` file in your project and add the following line to set Saral as the theme:
+
+```bash
 theme = "saral"
 ```
 
-2. **Customization:**
-   - Explore the theme's configuration options in the `config.toml` file to personalize your site.
+### Step 4: Build and Serve the Site
 
-3. **Content:**
-   - Start adding your content in the `content` directory.
+Finally, build and serve your site to see the Saral theme in action:
 
-4. **Development:**
-   - Run `hugo server -D` to preview your site locally.
+```bash
+hugo serve
+```
 
-## Support and Contribution
+Your new site should now be running with the Saral theme.
 
-For support or issues, please [open an issue](https://github.com/yourusername/saral/issues). Contributions are welcome!
+## Installing Saral for an Existing Project
 
-## License
+### Step 1: Navigate to Your Project Directory
 
-This theme is open-source and available under the [MIT License](LICENSE).
+Open your terminal and navigate to the root directory of your existing project:
 
----
+```bash
+cd path/to/your-existing-site
+```
 
-Feel free to customize it further based on specific features, details, or guidelines you want to provide to users.
+### Step 2: Add the Saral Theme
+
+Add the Saral theme as a Git submodule or download it directly.
+
+#### Using Git Submodule
+
+```bash
+git submodule add https://github.com/yourusername/saral.git themes/saral
+```
+
+#### Downloading Directly
+
+Alternatively, you can download the theme and extract it to the `themes` directory:
+
+```bash
+mkdir themes
+cd themes
+wget https://github.com/yourusername/saral/archive/main.zip
+unzip main.zip
+mv saral-main saral
+rm main.zip
+cd ..
+```
+
+### Step 3: Configure the Theme
+
+Open the `config.toml` file in your project and add the following line to set Saral as the theme:
+
+```bash
+theme = "saral"
+```
+
+### Step 4: Customize the Theme
+
+If your project has custom configurations or content, you may need to update your configurations or migrate content to fit the Saral theme's structure. Refer to the Saral theme documentation for specific instructions.
+
+### Step 5: Build and Serve the Site
+
+Build and serve your site to see the Saral theme in action:
+
+```bash
+hugo serve
+```
+
+Your existing site should now be running with the Saral theme.
+
+## Conclusion
+
+You have successfully installed the Saral theme for both new and existing projects. Enjoy the new look and feel of your site with Saral!
+
+For more information and customization options, refer to the [Saral theme documentation](https://github.com/yourusername/saral).

@@ -1,0 +1,42 @@
+baseURL = 'https://saral-hugo-theme.pages.dev/'
+languageCode = 'en-us'
+title = 'Saral : A simple hugo theme'
+theme = 'saral'
+
+pygmentsCodefences = true
+pygmentsStyle = "doom-one"
+
+[params]
+    logoText = "Saral"
+    isBlogFocused = true
+    showHeroImage = false
+    showResumeButton = false
+    math = true
+
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "Contact"
+    pre = "contact"
+    url = "/contact/"
+    weight = 40
+  [[menu.main]]
+    name = "Post"
+    pre = "post"
+    url = "/posts/"
+    weight = 20
+  [[menu.main]]
+    name = "Journey"
+    pre = "journey"
+    url = "/journey/"
+    weight = 40
+  [[menu.main]]
+    name = "Projects"
+    pre = "projects"
+    url = "/project/"
+    weight = 30
