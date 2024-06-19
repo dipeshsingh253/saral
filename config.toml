@@ -1,15 +1,15 @@
-baseURL = 'https://dipesh.dev/'
+baseURL = 'https://saral-hugo-theme.pages.dev/'
 languageCode = 'en-us'
-title = 'Dipesh Singh : Full Stack Developer'
+title = 'A simple and elegent theme for developers'
 
 theme = 'saral'
 pygmentsCodefences = true
 pygmentsStyle = "doom-one"
 
 [params]
-    logoText = "Dipesh"
-    showHeroImage = false
-    isBlogFocused = false
+    logoText = "Saral"
+    showHeroImage = true
+    isBlogFocused = true
     math = true
 
 
