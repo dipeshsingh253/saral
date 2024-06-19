@@ -147,7 +147,7 @@ class Solution {
 
 ## Testing LaTex sysnta in blog
 
-This is an inline \(a^*=x-b^*\) equation.
+This is an inline \@ a^*=x-b^* \@ equation.
 
 These are block equations:
 
@@ -155,9 +155,36 @@ These are block equations:
 
 \[ a^*=x-b^* \]
 
-\[
-a^*=x-b^*
-\]
+@@
+a^{x-b}
+@@
+
+@@
+\int_{a}^{b} f(x)\,dx = F(b) - F(a)
+@@
+
+@@
+S_n = \frac{n}{2} \cdot (a + l)
+@@
+
+
+
+@ E = mc^2 @
+
+@@
+F = ma
+@@
+
+
+@@
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+@@
+
+@@
+e^{i\pi} + 1 = 0
+@@
+
+
 
 These are block equations using alternate delimiters:
 
@@ -169,3 +196,6 @@ $$
 a^*=x-b^*
 $$
 
+
+
+A \\$5 bill _saved_ is a \\$5 bill _earned_.

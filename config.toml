@@ -9,18 +9,15 @@ pygmentsStyle = "doom-one"
 [params]
     logoText = "Dipesh"
     showHeroImage = false
-    isBlogFocused = true
+    isBlogFocused = false
     math = true
-
 
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
-        enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['@@', '@@']]
           inline = [['@', '@']]
-
 
