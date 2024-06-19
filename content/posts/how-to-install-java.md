@@ -1,7 +1,7 @@
 +++
 title = 'How to install Java'
 date = 2024-03-11T14:04:46+03:00
-draft = true
+draft = false
 layout = 'post'
 tags = ["java", "installation"]
 +++

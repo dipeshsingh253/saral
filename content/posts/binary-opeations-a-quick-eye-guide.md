@@ -1,7 +1,7 @@
 +++
 title = 'Binary Opeations a Quick Eye Guide'
 date = 2024-05-30T09:25:13+03:00
-draft = true
+draft = false
 +++
 
 ## Understanding Logic Gates

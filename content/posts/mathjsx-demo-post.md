@@ -1,5 +1,5 @@
 +++
-title = 'Mathjsx Demo Post'
+title = 'Demonstrating latex in hugo'
 date = 2024-06-18T08:17:26+03:00
 draft = false
 layout = 'post'
@@ -7,11 +7,15 @@ tags = ['latex', 'demo']
 +++
 
 
-## Demonstrating LaTeX in Hugo
-
 This blog post demonstrates how to use LaTeX in Hugo for various types of equations and theories, including mathematics, physics, and chemistry.
 
 ### Mathematical Equations
+
+{{< note >}}
+For some reason the latex is working in local for this particular repo but not when deployed due to uncertain reason to see the latex demo for saral you can visit the demo post in my personal portfolio as of now.
+<a href="https://dipesh.dev/posts/mathjsx-demo-post" target="blank"> Here </a>
+{{< /note >}}
+
 
 #### Quadratic Formula
 The quadratic formula is used to solve quadratic equations and is given by:
